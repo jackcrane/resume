@@ -500,6 +500,15 @@ function App() {
       <OneWheel />
       <Spacer />
       <Robotics />
+      <Spacer />
+      <Spacer />
+      <Hr />
+      <Spacer />
+      <BodyText style={{ textAlign: "center", fontStyle: "italic" }}>
+        This resume has been truncated for brevity and relevance. You can access
+        my full general resume at{" "}
+        <A href="https://resume.jackcrane.rocks">resume.jackcrane.rocks</A>
+      </BodyText>
     </Page>
   );
 }
