@@ -70,18 +70,31 @@ export const Column = styled.div`
   flex-direction: column;
   flex: 1;
 `;
-export const Skills = styled.ul`
+export const Skills = styled.div`
   margin: 0;
   padding-left: 15pt;
 `;
-export const SkillTitle = styled.li`
+export const SkillTitle = styled.span`
   font-size: 12pt;
   margin: 0;
+  width: 50%;
+  display: inline-block;
+  /* bullet point */
+  &:before {
+    content: "•";
+    display: inline-block;
+    width: 1em;
+  }
 `;
 export const SkillDescription = styled.span`
   font-size: 10pt;
   color: #646464;
   font-style: italic;
+`;
+export const SkillContainer = styled.div`
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
 `;
 
 export const JobDescription = styled.span`

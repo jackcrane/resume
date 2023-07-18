@@ -33,6 +33,7 @@ import {
   SkillDescription,
   BodyText,
   A,
+  SkillContainer,
 } from "./Kit";
 import { CV } from "./CV";
 import { Name } from "./Name";
@@ -141,9 +142,19 @@ const Admin = ({
         onChange={setSelection("skills/ui-design")}
       />
       <AdminRow
-        label="Software Development"
-        value={selections.includes("skills/software-development")}
-        onChange={setSelection("skills/software-development")}
+        label="Software Development (Frontend)"
+        value={selections.includes("skills/software-development-frontend")}
+        onChange={setSelection("skills/software-development-frontend")}
+      />
+      <AdminRow
+        label="Software Development (Backend)"
+        value={selections.includes("skills/software-development-backend")}
+        onChange={setSelection("skills/software-development-backend")}
+      />
+      <AdminRow
+        label="Software Development (Native)"
+        value={selections.includes("skills/software-development-native")}
+        onChange={setSelection("skills/software-development-native")}
       />
       <AdminRow
         label="Data"
@@ -231,7 +242,9 @@ function App() {
     "primatives/truncation",
 
     "skills/ui-design",
-    "skills/software-development",
+    "skills/software-development-frontend",
+    "skills/software-development-backend",
+    "skills/software-development-native",
     "skills/data",
     "skills/developer-ops",
     "skills/embedded-computing",
@@ -298,82 +311,71 @@ function App() {
           <Subtitle>Skills</Subtitle>
           <Hr />
           <Row style={{ alignItems: "flex-start" }}>
-            <Column>
-              <Skills>
-                {match("skills/ui-design") && (
-                  <SkillTitle>
-                    UI Design/graphic design{" "}
-                    <SkillDescription>Figma</SkillDescription>
-                  </SkillTitle>
-                )}
-                {match("skills/software-development") && (
-                  <SkillTitle>
-                    Software Development
-                    <Skills>
-                      <SkillTitle>
-                        Frontend{" "}
-                        <SkillDescription>
-                          React, HTML, CSS, JS
-                        </SkillDescription>
-                      </SkillTitle>
-                      <SkillTitle>
-                        Backend{" "}
-                        <SkillDescription>
-                          Node.js, Express, PHP
-                        </SkillDescription>
-                      </SkillTitle>
-                      <SkillTitle>
-                        Native{" "}
-                        <SkillDescription>React Native (Expo)</SkillDescription>
-                      </SkillTitle>
-                    </Skills>
-                  </SkillTitle>
-                )}
-                {match("skills/data") && (
-                  <SkillTitle>
-                    Data{" "}
-                    <SkillDescription>
-                      Matlab, Python, MySQL, MongoDB, Prisma
-                    </SkillDescription>
-                  </SkillTitle>
-                )}
-              </Skills>
-            </Column>
-            <Column>
-              <Skills>
-                {match("skills/developer-ops") && (
-                  <SkillTitle>
-                    Developer Ops{" "}
-                    <SkillDescription>
-                      Git, Github, Kubernetes, Jira
-                    </SkillDescription>
-                  </SkillTitle>
-                )}
-                {match("skills/embedded-computing") && (
-                  <SkillTitle>
-                    Embedded Computing{" "}
-                    <SkillDescription>Arduino, Raspberry Pi</SkillDescription>
-                  </SkillTitle>
-                )}
-                {match("skills/fabrication") && (
-                  <SkillTitle>
-                    Fabrication{" "}
-                    <SkillDescription>
-                      Makerbot ecosystem, Cura, Prusa Slicer, Glowforge, SLA &
-                      FDM Technologies
-                    </SkillDescription>
-                  </SkillTitle>
-                )}
-                {match("skills/3d-modelling") && (
-                  <SkillTitle>
-                    3D Modelling{" "}
-                    <SkillDescription>
-                      Rhinocerous, OnShape, Solidworks
-                    </SkillDescription>
-                  </SkillTitle>
-                )}
-              </Skills>
-            </Column>
+            <SkillContainer>
+              {match("skills/ui-design") && (
+                <SkillTitle>
+                  UI Design/graphic design{" "}
+                  <SkillDescription>Figma</SkillDescription>
+                </SkillTitle>
+              )}
+              {match("skills/software-development-frontend") && (
+                <SkillTitle>
+                  Frontend software development{" "}
+                  <SkillDescription>React, HTML, CSS, JS</SkillDescription>
+                </SkillTitle>
+              )}
+              {match("skills/software-development-backend") && (
+                <SkillTitle>
+                  Backend software development{" "}
+                  <SkillDescription>Node.js, Express, PHP</SkillDescription>
+                </SkillTitle>
+              )}
+              {match("skills/software-development-native") && (
+                <SkillTitle>
+                  Native software development{" "}
+                  <SkillDescription>React Native (Expo)</SkillDescription>
+                </SkillTitle>
+              )}
+              {match("skills/data") && (
+                <SkillTitle>
+                  Data{" "}
+                  <SkillDescription>
+                    Matlab, Python, MySQL, MongoDB, Prisma
+                  </SkillDescription>
+                </SkillTitle>
+              )}
+              {match("skills/developer-ops") && (
+                <SkillTitle>
+                  Developer Ops{" "}
+                  <SkillDescription>
+                    Git, Github, Kubernetes, Jira
+                  </SkillDescription>
+                </SkillTitle>
+              )}
+              {match("skills/embedded-computing") && (
+                <SkillTitle>
+                  Embedded Computing{" "}
+                  <SkillDescription>Arduino, Raspberry Pi</SkillDescription>
+                </SkillTitle>
+              )}
+              {match("skills/3d-modelling") && (
+                <SkillTitle>
+                  3D Modelling{" "}
+                  <SkillDescription>
+                    Rhinocerous, OnShape, Solidworks
+                  </SkillDescription>
+                </SkillTitle>
+              )}
+              {match("skills/fabrication") && (
+                <SkillTitle>
+                  Fabrication{" "}
+                  <SkillDescription>
+                    Makerbot ecosystem, Cura, Prusa Slicer, Glowforge, SLA & FDM
+                    Technologies
+                  </SkillDescription>
+                </SkillTitle>
+              )}
+            </SkillContainer>
           </Row>
         </>
       )}
