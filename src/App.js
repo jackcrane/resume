@@ -134,6 +134,89 @@ const Admin = ({
         value={selections.includes("education/high-school")}
         onChange={setSelection("education/high-school")}
       />
+      <Subtitle>Skills</Subtitle>
+      <AdminRow
+        label="UI Design/Graphic Design"
+        value={selections.includes("skills/ui-design")}
+        onChange={setSelection("skills/ui-design")}
+      />
+      <AdminRow
+        label="Software Development"
+        value={selections.includes("skills/software-development")}
+        onChange={setSelection("skills/software-development")}
+      />
+      <AdminRow
+        label="Data"
+        value={selections.includes("skills/data")}
+        onChange={setSelection("skills/data")}
+      />
+      <AdminRow
+        label="Developer Ops"
+        value={selections.includes("skills/developer-ops")}
+        onChange={setSelection("skills/developer-ops")}
+      />
+      <AdminRow
+        label="Embedded Computing"
+        value={selections.includes("skills/embedded-computing")}
+        onChange={setSelection("skills/embedded-computing")}
+      />
+      <AdminRow
+        label="Fabrication"
+        value={selections.includes("skills/fabrication")}
+        onChange={setSelection("skills/fabrication")}
+      />
+      <AdminRow
+        label="3D Modelling"
+        value={selections.includes("skills/3d-modelling")}
+        onChange={setSelection("skills/3d-modelling")}
+      />
+      <Subtitle>Experience</Subtitle>
+      <AdminRow
+        label="Ispace"
+        value={selections.includes("experience/ispace")}
+        onChange={setSelection("experience/ispace")}
+      />
+      <AdminRow
+        label="Perfect"
+        value={selections.includes("experience/perfect")}
+        onChange={setSelection("experience/perfect")}
+      />
+      <AdminRow
+        label="Adventure Crew"
+        value={selections.includes("experience/adventure-crew")}
+        onChange={setSelection("experience/adventure-crew")}
+      />
+      <AdminRow
+        label="Myers"
+        value={selections.includes("experience/myers")}
+        onChange={setSelection("experience/myers")}
+      />
+      <Subtitle>Projects</Subtitle>
+      <AdminRow
+        label="OgImage"
+        value={selections.includes("projects/og-image")}
+        onChange={setSelection("projects/og-image")}
+      />
+      <AdminRow
+        label="Apple Music Presence"
+        value={selections.includes("projects/apple-music-presence")}
+        onChange={setSelection("projects/apple-music-presence")}
+      />
+      <AdminRow
+        label="DigitalOcean Controller"
+        value={selections.includes("projects/digitalocean-controller")}
+        onChange={setSelection("projects/digitalocean-controller")}
+      />
+      <AdminRow
+        label="OneWheel"
+        value={selections.includes("projects/onewheel")}
+        onChange={setSelection("projects/onewheel")}
+      />
+      <AdminRow
+        label="Robotics"
+        value={selections.includes("projects/robotics")}
+        onChange={setSelection("projects/robotics")}
+      />
     </Modal>
   );
 };
@@ -147,8 +230,27 @@ function App() {
     "primatives/projects",
     "primatives/truncation",
 
+    "skills/ui-design",
+    "skills/software-development",
+    "skills/data",
+    "skills/developer-ops",
+    "skills/embedded-computing",
+    "skills/fabrication",
+    "skills/3d-modelling",
+
     "education/high-school",
     "education/college",
+
+    "experience/ispace",
+    "experience/perfect",
+    "experience/adventure-crew",
+    "experience/myers",
+
+    "projects/og-image",
+    "projects/apple-music-presence",
+    "projects/digitalocean-controller",
+    "projects/onewheel",
+    "projects/robotics",
   ]);
   const match = (path) => selections.includes(path);
   const [adminOpen, setAdminOpen] = useState(false);
@@ -198,60 +300,78 @@ function App() {
           <Row style={{ alignItems: "flex-start" }}>
             <Column>
               <Skills>
-                <SkillTitle>
-                  UI Design/graphic design{" "}
-                  <SkillDescription>Figma</SkillDescription>
-                </SkillTitle>
-                <SkillTitle>
-                  Software Development
-                  <Skills>
-                    <SkillTitle>
-                      Frontend{" "}
-                      <SkillDescription>React, HTML, CSS, JS</SkillDescription>
-                    </SkillTitle>
-                    <SkillTitle>
-                      Backend{" "}
-                      <SkillDescription>Node.js, Express, PHP</SkillDescription>
-                    </SkillTitle>
-                    <SkillTitle>
-                      Native{" "}
-                      <SkillDescription>React Native (Expo)</SkillDescription>
-                    </SkillTitle>
-                  </Skills>
-                </SkillTitle>
-                <SkillTitle>
-                  Data{" "}
-                  <SkillDescription>
-                    Matlab, Python, MySQL, MongoDB, Prisma
-                  </SkillDescription>
-                </SkillTitle>
+                {match("skills/ui-design") && (
+                  <SkillTitle>
+                    UI Design/graphic design{" "}
+                    <SkillDescription>Figma</SkillDescription>
+                  </SkillTitle>
+                )}
+                {match("skills/software-development") && (
+                  <SkillTitle>
+                    Software Development
+                    <Skills>
+                      <SkillTitle>
+                        Frontend{" "}
+                        <SkillDescription>
+                          React, HTML, CSS, JS
+                        </SkillDescription>
+                      </SkillTitle>
+                      <SkillTitle>
+                        Backend{" "}
+                        <SkillDescription>
+                          Node.js, Express, PHP
+                        </SkillDescription>
+                      </SkillTitle>
+                      <SkillTitle>
+                        Native{" "}
+                        <SkillDescription>React Native (Expo)</SkillDescription>
+                      </SkillTitle>
+                    </Skills>
+                  </SkillTitle>
+                )}
+                {match("skills/data") && (
+                  <SkillTitle>
+                    Data{" "}
+                    <SkillDescription>
+                      Matlab, Python, MySQL, MongoDB, Prisma
+                    </SkillDescription>
+                  </SkillTitle>
+                )}
               </Skills>
             </Column>
             <Column>
               <Skills>
-                <SkillTitle>
-                  Developer Ops{" "}
-                  <SkillDescription>
-                    Git, Github, Kubernetes, Jira
-                  </SkillDescription>
-                </SkillTitle>
-                <SkillTitle>
-                  Embedded Computing{" "}
-                  <SkillDescription>Arduino, Raspberry Pi</SkillDescription>
-                </SkillTitle>
-                <SkillTitle>
-                  Fabrication{" "}
-                  <SkillDescription>
-                    Makerbot ecosystem, Cura, Prusa Slicer, Glowforge, SLA & FDM
-                    Technologies
-                  </SkillDescription>
-                </SkillTitle>
-                <SkillTitle>
-                  3D Modelling{" "}
-                  <SkillDescription>
-                    Rhinocerous, OnShape, Solidworks
-                  </SkillDescription>
-                </SkillTitle>
+                {match("skills/developer-ops") && (
+                  <SkillTitle>
+                    Developer Ops{" "}
+                    <SkillDescription>
+                      Git, Github, Kubernetes, Jira
+                    </SkillDescription>
+                  </SkillTitle>
+                )}
+                {match("skills/embedded-computing") && (
+                  <SkillTitle>
+                    Embedded Computing{" "}
+                    <SkillDescription>Arduino, Raspberry Pi</SkillDescription>
+                  </SkillTitle>
+                )}
+                {match("skills/fabrication") && (
+                  <SkillTitle>
+                    Fabrication{" "}
+                    <SkillDescription>
+                      Makerbot ecosystem, Cura, Prusa Slicer, Glowforge, SLA &
+                      FDM Technologies
+                    </SkillDescription>
+                  </SkillTitle>
+                )}
+                {match("skills/3d-modelling") && (
+                  <SkillTitle>
+                    3D Modelling{" "}
+                    <SkillDescription>
+                      Rhinocerous, OnShape, Solidworks
+                    </SkillDescription>
+                  </SkillTitle>
+                )}
               </Skills>
             </Column>
           </Row>
@@ -263,13 +383,30 @@ function App() {
           <Spacer />
           <Subtitle>Experience</Subtitle>
           <Hr />
-          <Ispace />
-          <Spacer />
-          <Perfect />
-          <Spacer />
-          <AdventureCrew />
-          <Spacer />
-          <Myers />
+          {match("experience/ispace") && (
+            <>
+              <Ispace />
+              <Spacer />
+            </>
+          )}
+          {match("experience/perfect") && (
+            <>
+              <Perfect />
+              <Spacer />
+            </>
+          )}
+          {match("experience/adventure-crew") && (
+            <>
+              <AdventureCrew />
+              <Spacer />
+            </>
+          )}
+          {match("experience/myers") && (
+            <>
+              <Myers />
+              <Spacer />
+            </>
+          )}
         </>
       )}
       {match("primatives/projects") && (
@@ -278,16 +415,36 @@ function App() {
           <Spacer />
           <Subtitle>Projects</Subtitle>
           <Hr />
-          <OgImage />
-          <Spacer />
-          <AppleMusicPresence />
-          <Spacer />
-          <DigitalOceanController />
-          <Spacer />
-          <OneWheel />
-          <Spacer />
-          <Robotics />
-          <Spacer />
+          {match("projects/og-image") && (
+            <>
+              <OgImage />
+              <Spacer />
+            </>
+          )}
+          {match("projects/apple-music-presence") && (
+            <>
+              <AppleMusicPresence />
+              <Spacer />
+            </>
+          )}
+          {match("projects/digitalocean-controller") && (
+            <>
+              <DigitalOceanController />
+              <Spacer />
+            </>
+          )}
+          {match("projects/onewheel") && (
+            <>
+              <OneWheel />
+              <Spacer />
+            </>
+          )}
+          {match("projects/robotics") && (
+            <>
+              <Robotics />
+              <Spacer />
+            </>
+          )}
         </>
       )}
       {/* TRUNCATION */}
