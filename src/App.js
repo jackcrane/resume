@@ -68,7 +68,9 @@ const Admin = ({
     _setAdminOpen(adminOpen);
   }, [adminOpen]);
   const toggleAdmin = () => setAdminOpen(!adminOpen);
-  useHotkeys("a", toggleAdmin, { filterPreventDefault: true }, [adminOpen]);
+  useHotkeys("shift+a+j", toggleAdmin, { filterPreventDefault: true }, [
+    adminOpen,
+  ]);
   const [selections, setSelections] = useState(_selections);
   const setSelection = (selection) => {
     return (e) => {
@@ -91,7 +93,7 @@ const Admin = ({
   return (
     <Modal>
       <Title>Resume Configurator</Title>
-      <BodyText>Press "a" to close</BodyText>
+      <BodyText>Press "shift+a+j" to close</BodyText>
       <Hr />
       <Subtitle>Primatives</Subtitle>
       <AdminRow
