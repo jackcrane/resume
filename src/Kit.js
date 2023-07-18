@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Page = styled.div`
   transition: margin-left 0.3s;
   @media screen {
-    width: 8.5in;
+    max-width: 8.5in;
     margin-left: ${(props) => (props.adminOpen ? "0" : "auto")};
     margin-right: auto;
   }
