@@ -18,7 +18,7 @@ export const Ispace = () => (
           <JobDescription>Teacher & Curriculum Author</JobDescription>
         </SansSubtitle>
       </RowItem>
-      <Date>Cincinnati, Summers 2016 - Present</Date>
+      <Date>Cincinnati, Summers 2016 - 2021</Date>
     </Row>
     <BodyText>
       <B>Camp teacher</B> - Taught week-long day-camps to students ages K-12,
@@ -111,10 +111,11 @@ export const OgImage = () => (
     <BodyText>
       This open source project with over 100,000 monthy hits dynamically
       generates social media preview images for over 6,000 different websites.
-      Node JS, MongoDB, Cloudflare.{" "}
-      <A href="https://blog.jackcrane.rocks/2021/08/20/og-image.html">
-        https://blog.jackcrane.rocks/2021/08/20/og-image.html
-      </A>
+      Node.js, MongoDB, Cloudflare.{" "}
+      <A href="https://go.jackcrane.rocks/blog/og-image">
+        https://go.jackcrane.rocks/blog/og-image
+      </A>{" "}
+      <A href="https:/og-image.xyz">https://og-image.xyz</A>
     </BodyText>
   </>
 );
@@ -129,9 +130,9 @@ export const AppleMusicPresence = () => (
     <BodyText>
       This project integrates with Apple Music and Discord on Macs, allowing you
       to share the music you are listening to with your friends! This project
-      has 37 GitHub stars and roughly 200 new users per month. JS, S3, Node JS.
-      <A href="https://blog.jackcrane.rocks/2022/05/02/apple-music-presence.html">
-        https://blog.jackcrane.rocks/2022/05/02/apple-music-presence.html
+      has 37 GitHub stars and roughly 200 new users per month. JS, S3, Node.js.{" "}
+      <A href="https://go.jackcrane.rocks/blog/amp">
+        https://go.jackcrane.rocks/blog/amp
       </A>
     </BodyText>
   </>
@@ -149,8 +150,8 @@ export const DigitalOceanController = () => (
       control their accounts. This project caught the attention of DigitalOcean
       and I got to meet some of their engineers. React Native (Expo), Cloudflare
       Functions.{" "}
-      <A href="https://blog.jackcrane.rocks/2022/03/19/digitalocean-app.html">
-        https://blog.jackcrane.rocks/2022/03/19/digitalocean-app.html
+      <A href="https://go.jackcrane.rocks/blog/do-app">
+        https://go.jackcrane.rocks/blog/do-app
       </A>
     </BodyText>
   </>
@@ -167,8 +168,8 @@ export const OneWheel = () => (
       This project, my first individual exploration into mechanical engineering,
       is a clone of a OneWheel self-balancing skateboard. This project is still
       in progress and is 100% originally designed. OnShape, Arduino.{" "}
-      <A href="https://blog.jackcrane.rocks/2022/03/19/digitalocean-app.html">
-        https://blog.jackcrane.rocks/2022/03/19/digitalocean-app.html
+      <A href="https://go.jackcrane.rocks/blog/onewheel">
+        https://go.jackcrane.rocks/blog/onewheel
       </A>
     </BodyText>
   </>
@@ -182,14 +183,72 @@ export const Robotics = () => (
       <Date>2012 - Present</Date>
     </Row>
     <BodyText>
-      Throught over a decade, I have been involved in FIRST robotics, allowing
-      me to participate in the world championship and to found and captain my
-      high school team to the state championship 3 times, winning awards for
+      Through over a decade, I have been involved in FIRST robotics, allowing me
+      to participate in the world championship and to found and captain my high
+      school team to the state championship 3 times, winning awards for
       teamwork, sportsmanship, documentation, software, and hardware design, as
       well as I earned the highest individual leadership award in the state.{" "}
-      <A href="https://blog.jackcrane.rocks/2022/11/22/robot.html">
-        https://blog.jackcrane.rocks/2022/11/22/robot.html
+      <A href="https://go.jackcrane.rocks/blog/robotics">
+        https://go.jackcrane.rocks/blog/robotics
       </A>
+    </BodyText>
+  </>
+);
+export const ORW = () => (
+  <>
+    <Row>
+      <RowItem>
+        <SansSubtitle>Ohio River Way</SansSubtitle>
+      </RowItem>
+      <Date>May 2023 - July 2023</Date>
+    </Row>
+    <BodyText>
+      The Ohio River Way approached me to build a mobile app for paddlers to use
+      as they experience the outdoors on the Ohio River. The result is a very
+      simple app that links to important resources for paddlers, including river
+      conditions, weather, and safety information. React Native (Expo), Node.js,
+      MySQL (Prisma), Cloudflare.{" "}
+    </BodyText>
+  </>
+);
+export const Differential = () => (
+  <>
+    <Row>
+      <RowItem>
+        <SansSubtitle>
+          Differential Dev Shop{" "}
+          <JobDescription>Co-Op Software Developer</JobDescription>
+        </SansSubtitle>
+      </RowItem>
+      <Date>Cincinnati, Oct 2022 - Present</Date>
+    </Row>
+    <BodyText>
+      <B>Apollos</B> - Between my freshman and sophomore college years, I
+      co-op'd at Differential, working on their Apollos team, building mobile
+      apps for megachurches. I was one of 3 developers on their Frontend team,
+      building out the React Native app. I was personally heavily involved in
+      the "communities" feature, allowing users to build communities and "grow
+      together".
+    </BodyText>
+  </>
+);
+export const SLUCam = () => (
+  <>
+    <Row>
+      <RowItem>
+        <SansSubtitle>
+          SLUCam <JobDescription>Student Worker</JobDescription>
+        </SansSubtitle>
+      </RowItem>
+      <Date>St. Louis, Aug 2022 - Present</Date>
+    </Row>
+    <BodyText>
+      <B>Research adjacent</B> - At the Saint Louis University Center for
+      Additive Manufacturing, I am working to build out our understanding of
+      Resin printing while learning about engineering for additive
+      manufacturing, performing engineering analysis on models, and pre- and
+      post- processing 3d prints to the highest quality for research labs in the
+      university or other clients.
     </BodyText>
   </>
 );

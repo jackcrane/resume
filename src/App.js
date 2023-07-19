@@ -13,6 +13,9 @@ import {
   DigitalOceanController,
   OneWheel,
   Robotics,
+  Differential,
+  SLUCam,
+  ORW,
 } from "./Experiences";
 import {
   AdminRowContainer,
@@ -169,6 +172,11 @@ const Admin = ({
         onChange={setSelection("skills/developer-ops")}
       />
       <AdminRow
+        label="Cloud Computing"
+        value={selections.includes("skills/cloud")}
+        onChange={setSelection("skills/cloud")}
+      />
+      <AdminRow
         label="Embedded Computing"
         value={selections.includes("skills/embedded-computing")}
         onChange={setSelection("skills/embedded-computing")}
@@ -185,6 +193,27 @@ const Admin = ({
       />
       <Subtitle>Experience</Subtitle>
       <AdminRow
+        label="Differential"
+        value={selections.includes("experience/differential")}
+        onChange={setSelection("experience/differential")}
+      />
+
+      <AdminRow
+        label="Adventure Crew"
+        value={selections.includes("experience/adventure-crew")}
+        onChange={setSelection("experience/adventure-crew")}
+      />
+      <AdminRow
+        label="SLUCam"
+        value={selections.includes("experience/slucam")}
+        onChange={setSelection("experience/slucam")}
+      />
+      <AdminRow
+        label="Myers"
+        value={selections.includes("experience/myers")}
+        onChange={setSelection("experience/myers")}
+      />
+      <AdminRow
         label="Ispace"
         value={selections.includes("experience/ispace")}
         onChange={setSelection("experience/ispace")}
@@ -193,16 +222,6 @@ const Admin = ({
         label="Perfect"
         value={selections.includes("experience/perfect")}
         onChange={setSelection("experience/perfect")}
-      />
-      <AdminRow
-        label="Adventure Crew"
-        value={selections.includes("experience/adventure-crew")}
-        onChange={setSelection("experience/adventure-crew")}
-      />
-      <AdminRow
-        label="Myers"
-        value={selections.includes("experience/myers")}
-        onChange={setSelection("experience/myers")}
       />
       <Subtitle>Projects</Subtitle>
       <AdminRow
@@ -214,6 +233,11 @@ const Admin = ({
         label="Apple Music Presence"
         value={selections.includes("projects/apple-music-presence")}
         onChange={setSelection("projects/apple-music-presence")}
+      />
+      <AdminRow
+        label="Ohio River Way"
+        value={selections.includes("projects/orw")}
+        onChange={setSelection("projects/orw")}
       />
       <AdminRow
         label="DigitalOcean Controller"
@@ -236,7 +260,6 @@ const Admin = ({
 
 function App() {
   const [selections, setSelections] = useState([
-    "primatives/cv",
     "primatives/education",
     "primatives/skills",
     "primatives/experience",
@@ -249,6 +272,7 @@ function App() {
     "skills/software-development-native",
     "skills/data",
     "skills/developer-ops",
+    "skills/cloud",
     "skills/embedded-computing",
     "skills/fabrication",
     "skills/3d-modelling",
@@ -256,6 +280,8 @@ function App() {
     "education/high-school",
     "education/college",
 
+    "experience/differential",
+    "experience/slucam",
     "experience/ispace",
     "experience/perfect",
     "experience/adventure-crew",
@@ -263,6 +289,7 @@ function App() {
 
     "projects/og-image",
     "projects/apple-music-presence",
+    "projects/orw",
     "projects/digitalocean-controller",
     "projects/onewheel",
     "projects/robotics",
@@ -349,9 +376,13 @@ function App() {
               {match("skills/developer-ops") && (
                 <SkillTitle>
                   Developer Ops{" "}
-                  <SkillDescription>
-                    Git, Github, Kubernetes, Jira
-                  </SkillDescription>
+                  <SkillDescription>Git, Github, GitLab, Jira</SkillDescription>
+                </SkillTitle>
+              )}
+              {match("skills/cloud") && (
+                <SkillTitle>
+                  Cloud Computing{" "}
+                  <SkillDescription>Kubernetes, DigitalOcean</SkillDescription>
                 </SkillTitle>
               )}
               {match("skills/embedded-computing") && (
@@ -373,7 +404,7 @@ function App() {
                   Fabrication{" "}
                   <SkillDescription>
                     Makerbot ecosystem, Cura, Prusa Slicer, Glowforge, SLA & FDM
-                    Technologies
+                    Technologies, GrabCAD Shop
                   </SkillDescription>
                 </SkillTitle>
               )}
@@ -387,15 +418,9 @@ function App() {
           <Spacer />
           <Subtitle>Experience</Subtitle>
           <Hr />
-          {match("experience/ispace") && (
+          {match("experience/differential") && (
             <>
-              <Ispace />
-              <Spacer />
-            </>
-          )}
-          {match("experience/perfect") && (
-            <>
-              <Perfect />
+              <Differential />
               <Spacer />
             </>
           )}
@@ -405,9 +430,27 @@ function App() {
               <Spacer />
             </>
           )}
+          {match("experience/slucam") && (
+            <>
+              <SLUCam />
+              <Spacer />
+            </>
+          )}
           {match("experience/myers") && (
             <>
               <Myers />
+              <Spacer />
+            </>
+          )}
+          {match("experience/ispace") && (
+            <>
+              <Ispace />
+              <Spacer />
+            </>
+          )}
+          {match("experience/perfect") && (
+            <>
+              <Perfect />
               <Spacer />
             </>
           )}
@@ -428,6 +471,12 @@ function App() {
           {match("projects/apple-music-presence") && (
             <>
               <AppleMusicPresence />
+              <Spacer />
+            </>
+          )}
+          {match("projects/orw") && (
+            <>
+              <ORW />
               <Spacer />
             </>
           )}
