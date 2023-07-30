@@ -78,6 +78,13 @@ export const AdventureCrew = () => (
       volunteers, and allowed for unprecedented management for the leadership
       team.
     </BodyText>
+    <BodyText>
+      <B>Volunteer Coordinator</B> - Served as the volunteer coordinator for
+      Paddlefest 2022 and 2023, managing over 160 volunteers each year,
+      providing them with information, serving as a liason between volunteers
+      and leadership, and ensuring that our guests had a great experience by
+      providing an excellent volunteer experience.
+    </BodyText>
   </>
 );
 export const Myers = () => (
@@ -97,6 +104,14 @@ export const Myers = () => (
       improved efficiency by reducing lag time between a customer running out of
       hardware and the replacement order being placed. This immediately reduced
       downtime and improved sales rep workload.
+    </BodyText>
+    <BodyText>
+      <B>Sales Reps reporting system</B> - Built a web app and the corresponding
+      backend and database for internal use by Myers sales reps to view and
+      export their sales data. This app filled a gap in resources available to
+      sales reps and allowed them to more easily view and analyze their sales
+      data. It features auth, role-based access control, high-performance huge
+      data tables (with conditional formatting), and suite of admin tools.
     </BodyText>
   </>
 );
