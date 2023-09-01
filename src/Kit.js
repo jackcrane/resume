@@ -10,7 +10,7 @@ export const Page = styled.div`
 `;
 export const Title = styled.h1`
   font-family: "Playfair Display", serif;
-  font-size: 32pt;
+  font-size: 24pt;
   font-weight: 900;
   margin: 0;
 `;
@@ -19,15 +19,16 @@ export const Row = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: ${(props) => props.align || "center"};
+  gap: ${(props) => props.gap || 0}pt;
 `;
 export const RowImage = styled.img`
-  width: 12pt;
-  height: 12pt;
+  width: 8pt;
+  height: 8pt;
 `;
 export const RowLink = styled.a`
   color: inherit;
-  font-size: 10pt;
+  font-size: 8pt;
   text-decoration-color: #646464;
 `;
 
@@ -39,30 +40,34 @@ export const RowItem = styled.div`
 `;
 export const Subtitle = styled.h2`
   font-family: "Playfair Display", serif;
-  font-size: 20pt;
+  font-size: 12pt;
   font-weight: 900;
   margin: 0;
 `;
 export const Spacer = styled.div`
-  height: 10pt;
+  height: 4pt;
 `;
 export const Hr = styled.hr`
   border: 0;
+  width: 100%;
   height: 3px;
   background: #646464;
+  flex: 1;
+  margin-top: 2px;
+  margin-bottom: 2px;
 `;
 
 export const SansSubtitle = styled.h2`
-  font-size: 14pt;
+  font-size: 10pt;
   font-weight: 900;
   margin: 0;
 `;
 export const Label = styled.span`
-  font-size: 10pt;
+  font-size: 8pt;
 `;
 
 export const Date = styled.span`
-  font-size: 14pt;
+  font-size: 8pt;
   color: #646464;
 `;
 export const Column = styled.div`
@@ -72,22 +77,23 @@ export const Column = styled.div`
 `;
 export const Skills = styled.div`
   margin: 0;
-  padding-left: 15pt;
+  line-height: 1;
 `;
 export const SkillTitle = styled.span`
-  font-size: 12pt;
+  font-size: 8pt;
   margin: 0;
-  width: 50%;
   display: inline-block;
+  color: inherit;
   /* bullet point */
   &:before {
     content: "•";
     display: inline-block;
+    color: inherit;
     width: 1em;
   }
 `;
 export const SkillDescription = styled.span`
-  font-size: 10pt;
+  font-size: 8pt;
   color: #646464;
   font-style: italic;
 `;
@@ -103,7 +109,7 @@ export const JobDescription = styled.span`
 `;
 
 export const BodyText = styled.p`
-  font-size: 12pt;
+  font-size: 8pt;
   color: #646464;
   margin: 0;
   margin-top: 5pt;
@@ -117,6 +123,8 @@ export const B = styled.span`
 export const A = styled.a`
   color: inherit;
   text-decoration-color: #646464;
+  color: #646464;
+  font-size: 12px;
   font-style: italic;
 `;
 export const Modal = styled.div`

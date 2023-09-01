@@ -247,12 +247,12 @@ export const Differential = () => (
     </BodyText>
   </>
 );
-export const SLUCam = () => (
+export const SLUCAM = () => (
   <>
     <Row>
       <RowItem>
         <SansSubtitle>
-          SLUCam <JobDescription>Student Worker</JobDescription>
+          SLUCAM <JobDescription>Student Worker</JobDescription>
         </SansSubtitle>
       </RowItem>
       <Date>St. Louis, Aug 2022 - Present</Date>

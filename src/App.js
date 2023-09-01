@@ -14,7 +14,7 @@ import {
   OneWheel,
   Robotics,
   Differential,
-  SLUCam,
+  SLUCAM,
   ORW,
 } from "./Experiences";
 import {
@@ -37,9 +37,121 @@ import {
   BodyText,
   A,
   SkillContainer,
+  JobDescription,
+  B,
 } from "./Kit";
 import { CV } from "./CV";
 import { Name } from "./Name";
+import data from "./resume.json";
+import {
+  SiAmazons3,
+  SiAndroid,
+  SiApollographql,
+  SiArduino,
+  SiCloudflare,
+  SiDassaultsystemes,
+  SiDigitalocean,
+  SiExpo,
+  SiExpress,
+  SiFirst,
+  SiGraphql,
+  SiHeroku,
+  SiIos,
+  SiMakerbot,
+  SiMysql,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiPostgresql,
+  SiPrisma,
+  SiPython,
+  SiReact,
+  SiScratch,
+  SiSequelize,
+  SiStripe,
+  SiStyledcomponents,
+} from "@icons-pack/react-simple-icons";
+
+const switchForIcon = (icon) => {
+  const config = {
+    size: 12,
+    color: "#646464",
+  };
+  if (icon === "react") {
+    return <SiReact {...config} />;
+  }
+  if (icon === "express") {
+    return <SiExpress {...config} />;
+  }
+  if (icon === "mysql") {
+    return <SiMysql {...config} />;
+  }
+  if (icon === "ios") {
+    return <SiIos {...config} />;
+  }
+  if (icon === "s3") {
+    return <SiAmazons3 {...config} />;
+  }
+  if (icon === "nodejs") {
+    return <SiNodedotjs {...config} />;
+  }
+  if (icon === "graphql") {
+    return <SiGraphql {...config} />;
+  }
+  if (icon === "apollographql") {
+    return <SiApollographql {...config} />;
+  }
+  if (icon === "heroku") {
+    return <SiHeroku {...config} />;
+  }
+  if (icon === "android") {
+    return <SiAndroid {...config} />;
+  }
+  if (icon === "sequelize") {
+    return <SiSequelize {...config} />;
+  }
+  if (icon === "expo") {
+    return <SiExpo {...config} />;
+  }
+  if (icon === "nextjs") {
+    return <SiNextdotjs {...config} />;
+  }
+  if (icon === "prisma") {
+    return <SiPrisma {...config} />;
+  }
+  if (icon === "makerbot") {
+    return <SiMakerbot {...config} />;
+  }
+  if (icon === "arduino") {
+    return <SiArduino {...config} />;
+  }
+  if (icon === "digitalocean") {
+    return <SiDigitalocean {...config} />;
+  }
+  if (icon === "cloudflare") {
+    return <SiCloudflare {...config} />;
+  }
+  if (icon === "first") {
+    return <SiFirst {...config} />;
+  }
+  if (icon === "solidworks") {
+    return <SiDassaultsystemes {...config} />;
+  }
+  if (icon === "python") {
+    return <SiPython {...config} />;
+  }
+  if (icon === "scratch") {
+    return <SiScratch {...config} />;
+  }
+  if (icon === "styledcomponents") {
+    return <SiStyledcomponents {...config} />;
+  }
+  if (icon === "stripe") {
+    return <SiStripe {...config} />;
+  }
+  if (icon === "postgres") {
+    return <SiPostgresql {...config} />;
+  }
+};
 
 const AdminRow = ({ value, onChange, label }) => {
   const inputRef = useRef(null);
@@ -61,460 +173,240 @@ const AdminRow = ({ value, onChange, label }) => {
   );
 };
 
-const Admin = ({
-  selections: _selections,
-  setSelections: _setSelections,
-  setAdminOpen: _setAdminOpen,
-}) => {
-  const [adminOpen, setAdminOpen] = useState(false);
-  useEffect(() => {
-    _setAdminOpen(adminOpen);
-  }, [adminOpen]);
-  const toggleAdmin = () => setAdminOpen(!adminOpen);
-  useHotkeys("shift+a+j", toggleAdmin, { filterPreventDefault: true }, [
-    adminOpen,
-  ]);
-  const [selections, setSelections] = useState(_selections);
-  const setSelection = (selection) => {
-    return (e) => {
-      const value = e.target.checked;
-      if (value) {
-        setSelections([...selections, selection]);
-      }
-      if (!value) {
-        setSelections(selections.filter((s) => s !== selection));
-      }
-    };
-  };
-  useEffect(() => {
-    if (adminOpen) {
-      _setSelections(selections);
-    }
-  }, [selections]);
-
-  if (!adminOpen) return <></>;
+const App = () => {
+  const [useLongText, setUseLongText] = useState(false);
+  const [bulletPreference, setBulletPreference] = useState("both");
   return (
-    <Modal>
-      <Title>Resume Configurator</Title>
-      <BodyText>Press "shift+a+j" to close</BodyText>
-      <Hr />
-      <Subtitle>Primatives</Subtitle>
-      <AdminRow
-        label="CV"
-        value={selections.includes("primatives/cv")}
-        onChange={setSelection("primatives/cv")}
-      />
-      <AdminRow
-        label="Education"
-        value={selections.includes("primatives/education")}
-        onChange={setSelection("primatives/education")}
-      />
-      <AdminRow
-        label="Skills"
-        value={selections.includes("primatives/skills")}
-        onChange={setSelection("primatives/skills")}
-      />
-      <AdminRow
-        label="Experience"
-        value={selections.includes("primatives/experience")}
-        onChange={setSelection("primatives/experience")}
-      />
-      <AdminRow
-        label="Projects"
-        value={selections.includes("primatives/projects")}
-        onChange={setSelection("primatives/projects")}
-      />
-      <AdminRow
-        label="Truncation Notice"
-        value={selections.includes("primatives/truncation")}
-        onChange={setSelection("primatives/truncation")}
-      />
-      <Subtitle>Education</Subtitle>
-      <AdminRow
-        label="College"
-        value={selections.includes("education/college")}
-        onChange={setSelection("education/college")}
-      />
-      <AdminRow
-        label="High School"
-        value={selections.includes("education/high-school")}
-        onChange={setSelection("education/high-school")}
-      />
-      <Subtitle>Skills</Subtitle>
-      <AdminRow
-        label="UI Design/Graphic Design"
-        value={selections.includes("skills/ui-design")}
-        onChange={setSelection("skills/ui-design")}
-      />
-      <AdminRow
-        label="Software Development (Frontend)"
-        value={selections.includes("skills/software-development-frontend")}
-        onChange={setSelection("skills/software-development-frontend")}
-      />
-      <AdminRow
-        label="Software Development (Backend)"
-        value={selections.includes("skills/software-development-backend")}
-        onChange={setSelection("skills/software-development-backend")}
-      />
-      <AdminRow
-        label="Software Development (Native)"
-        value={selections.includes("skills/software-development-native")}
-        onChange={setSelection("skills/software-development-native")}
-      />
-      <AdminRow
-        label="Data"
-        value={selections.includes("skills/data")}
-        onChange={setSelection("skills/data")}
-      />
-      <AdminRow
-        label="Developer Ops"
-        value={selections.includes("skills/developer-ops")}
-        onChange={setSelection("skills/developer-ops")}
-      />
-      <AdminRow
-        label="Cloud Computing"
-        value={selections.includes("skills/cloud")}
-        onChange={setSelection("skills/cloud")}
-      />
-      <AdminRow
-        label="Embedded Computing"
-        value={selections.includes("skills/embedded-computing")}
-        onChange={setSelection("skills/embedded-computing")}
-      />
-      <AdminRow
-        label="Fabrication"
-        value={selections.includes("skills/fabrication")}
-        onChange={setSelection("skills/fabrication")}
-      />
-      <AdminRow
-        label="3D Modelling"
-        value={selections.includes("skills/3d-modelling")}
-        onChange={setSelection("skills/3d-modelling")}
-      />
-      <Subtitle>Experience</Subtitle>
-      <AdminRow
-        label="Differential"
-        value={selections.includes("experience/differential")}
-        onChange={setSelection("experience/differential")}
-      />
-
-      <AdminRow
-        label="Adventure Crew"
-        value={selections.includes("experience/adventure-crew")}
-        onChange={setSelection("experience/adventure-crew")}
-      />
-      <AdminRow
-        label="SLUCam"
-        value={selections.includes("experience/slucam")}
-        onChange={setSelection("experience/slucam")}
-      />
-      <AdminRow
-        label="Myers"
-        value={selections.includes("experience/myers")}
-        onChange={setSelection("experience/myers")}
-      />
-      <AdminRow
-        label="Ispace"
-        value={selections.includes("experience/ispace")}
-        onChange={setSelection("experience/ispace")}
-      />
-      <AdminRow
-        label="Perfect"
-        value={selections.includes("experience/perfect")}
-        onChange={setSelection("experience/perfect")}
-      />
-      <Subtitle>Projects</Subtitle>
-      <AdminRow
-        label="OgImage"
-        value={selections.includes("projects/og-image")}
-        onChange={setSelection("projects/og-image")}
-      />
-      <AdminRow
-        label="Apple Music Presence"
-        value={selections.includes("projects/apple-music-presence")}
-        onChange={setSelection("projects/apple-music-presence")}
-      />
-      <AdminRow
-        label="Ohio River Way"
-        value={selections.includes("projects/orw")}
-        onChange={setSelection("projects/orw")}
-      />
-      <AdminRow
-        label="DigitalOcean Controller"
-        value={selections.includes("projects/digitalocean-controller")}
-        onChange={setSelection("projects/digitalocean-controller")}
-      />
-      <AdminRow
-        label="OneWheel"
-        value={selections.includes("projects/onewheel")}
-        onChange={setSelection("projects/onewheel")}
-      />
-      <AdminRow
-        label="Robotics"
-        value={selections.includes("projects/robotics")}
-        onChange={setSelection("projects/robotics")}
-      />
-    </Modal>
-  );
-};
-
-function App() {
-  const [selections, setSelections] = useState([
-    "primatives/education",
-    "primatives/skills",
-    "primatives/experience",
-    "primatives/projects",
-    "primatives/truncation",
-
-    "skills/ui-design",
-    "skills/software-development-frontend",
-    "skills/software-development-backend",
-    "skills/software-development-native",
-    "skills/data",
-    "skills/developer-ops",
-    "skills/cloud",
-    "skills/embedded-computing",
-    "skills/fabrication",
-    "skills/3d-modelling",
-
-    "education/high-school",
-    "education/college",
-
-    "experience/differential",
-    "experience/slucam",
-    "experience/ispace",
-    "experience/perfect",
-    "experience/adventure-crew",
-    "experience/myers",
-
-    "projects/og-image",
-    "projects/apple-music-presence",
-    "projects/orw",
-    "projects/digitalocean-controller",
-    "projects/onewheel",
-    "projects/robotics",
-  ]);
-  const match = (path) => selections.includes(path);
-  const [adminOpen, setAdminOpen] = useState(false);
-  return (
-    <Page adminOpen={adminOpen}>
-      <Admin
-        selections={selections}
-        setSelections={setSelections}
-        setAdminOpen={setAdminOpen}
-      />
-      {match("primatives/cv") && <CV />}
-      <Name />
-      {match("primatives/education") && (
-        <>
-          {/* EDUCATION */}
-          <Spacer />
-          <Subtitle>Education</Subtitle>
-          <Hr />
-          {match("education/college") && (
-            <Row>
-              <RowItem>
-                <SansSubtitle>Saint Louis University</SansSubtitle>
-                <Label>St. Louis, Missouri</Label>
-              </RowItem>
-              <Label>B.S. Mechanical Engineering & Computer Science</Label>
-              <Date>May 2026</Date>
-            </Row>
-          )}
-          {match("education/high-school") && (
-            <Row>
-              <RowItem>
-                <SansSubtitle>Summit Country Day School</SansSubtitle>
-                <Label>Cincinnati, Ohio</Label>
-              </RowItem>
-              <Label>High School Diploma</Label>
-              <Date>May 2022</Date>
-            </Row>
-          )}
-        </>
-      )}
-      {match("primatives/skills") && (
-        <>
-          {/* SKILLS */}
+    <Page>
+      {/* <CV /> */}
+      <Name headerLinks={data.headerLinks} useLongText={useLongText} />
+      {/* EDUCATION */}
+      <>
+        <Spacer />
+        <Subtitle>Education</Subtitle>
+        <Hr />
+        {data.education.map((edu, i) => (
+          <Row key={i}>
+            <RowItem>
+              <SansSubtitle>{edu.school}</SansSubtitle>
+              <Label>{edu.location}</Label>
+            </RowItem>
+            <Label>{useLongText ? edu.degree : edu.shortDegree}</Label>
+            <Date>{edu.date}</Date>
+          </Row>
+        ))}
+      </>
+      <Row align="flex-start" gap={10}>
+        {/* SKILLS */}
+        <div style={{ flex: 1 }}>
           <Spacer />
           <Subtitle>Skills</Subtitle>
           <Hr />
           <Row style={{ alignItems: "flex-start" }}>
             <SkillContainer>
-              {match("skills/ui-design") && (
-                <SkillTitle>
-                  UI Design/graphic design{" "}
-                  <SkillDescription>Figma</SkillDescription>
-                </SkillTitle>
-              )}
-              {match("skills/software-development-frontend") && (
-                <SkillTitle>
-                  Frontend software development{" "}
-                  <SkillDescription>React, HTML, CSS, JS</SkillDescription>
-                </SkillTitle>
-              )}
-              {match("skills/software-development-backend") && (
-                <SkillTitle>
-                  Backend software development{" "}
-                  <SkillDescription>Node.js, Express, PHP</SkillDescription>
-                </SkillTitle>
-              )}
-              {match("skills/software-development-native") && (
-                <SkillTitle>
-                  Native software development{" "}
-                  <SkillDescription>React Native (Expo)</SkillDescription>
-                </SkillTitle>
-              )}
-              {match("skills/data") && (
-                <SkillTitle>
-                  Data{" "}
-                  <SkillDescription>
-                    Matlab, Python, MySQL, MongoDB, Prisma
-                  </SkillDescription>
-                </SkillTitle>
-              )}
-              {match("skills/developer-ops") && (
-                <SkillTitle>
-                  Developer Ops{" "}
-                  <SkillDescription>Git, Github, GitLab, Jira</SkillDescription>
-                </SkillTitle>
-              )}
-              {match("skills/cloud") && (
-                <SkillTitle>
-                  Cloud Computing{" "}
-                  <SkillDescription>Kubernetes, DigitalOcean</SkillDescription>
-                </SkillTitle>
-              )}
-              {match("skills/embedded-computing") && (
-                <SkillTitle>
-                  Embedded Computing{" "}
-                  <SkillDescription>Arduino, Raspberry Pi</SkillDescription>
-                </SkillTitle>
-              )}
-              {match("skills/3d-modelling") && (
-                <SkillTitle>
-                  3D Modelling{" "}
-                  <SkillDescription>
-                    Rhinocerous, OnShape, Solidworks
-                  </SkillDescription>
-                </SkillTitle>
-              )}
-              {match("skills/fabrication") && (
-                <SkillTitle>
-                  Fabrication{" "}
-                  <SkillDescription>
-                    Makerbot ecosystem, Cura, Prusa Slicer, Glowforge, SLA & FDM
-                    Technologies, GrabCAD Shop
-                  </SkillDescription>
-                </SkillTitle>
-              )}
+              {data.skills.slice(0, data.skills.length / 2).map((skill, i) => (
+                <Skills key={i}>
+                  <SkillTitle>{skill.title}</SkillTitle>{" "}
+                  <SkillDescription>{skill.fields.join(", ")}</SkillDescription>
+                </Skills>
+              ))}
+            </SkillContainer>
+            <SkillContainer>
+              {data.skills.slice(data.skills.length / 2).map((skill, i) => (
+                <Skills key={i}>
+                  <SkillTitle>{skill.title}</SkillTitle>{" "}
+                  <SkillDescription>{skill.fields.join(", ")}</SkillDescription>
+                </Skills>
+              ))}
             </SkillContainer>
           </Row>
-        </>
-      )}
-      {match("primatives/experience") && (
-        <>
-          {/* EXPERIENCE */}
+        </div>
+        {/* AWARDS */}
+        <div style={{ maxWidth: "25%" }}>
           <Spacer />
-          <Subtitle>Experience</Subtitle>
+          <Subtitle>Awards & Certifications</Subtitle>
           <Hr />
-          {match("experience/differential") && (
-            <>
-              <Differential />
-              <Spacer />
-            </>
-          )}
-          {match("experience/adventure-crew") && (
-            <>
-              <AdventureCrew />
-              <Spacer />
-            </>
-          )}
-          {match("experience/slucam") && (
-            <>
-              <SLUCam />
-              <Spacer />
-            </>
-          )}
-          {match("experience/myers") && (
-            <>
-              <Myers />
-              <Spacer />
-            </>
-          )}
-          {match("experience/ispace") && (
-            <>
-              <Ispace />
-              <Spacer />
-            </>
-          )}
-          {match("experience/perfect") && (
-            <>
-              <Perfect />
-              <Spacer />
-            </>
-          )}
-        </>
-      )}
-      {match("primatives/projects") && (
-        <>
-          {/* PROJECTS */}
-          <Spacer />
-          <Subtitle>Projects</Subtitle>
-          <Hr />
-          {match("projects/og-image") && (
-            <>
-              <OgImage />
-              <Spacer />
-            </>
-          )}
-          {match("projects/apple-music-presence") && (
-            <>
-              <AppleMusicPresence />
-              <Spacer />
-            </>
-          )}
-          {match("projects/orw") && (
-            <>
-              <ORW />
-              <Spacer />
-            </>
-          )}
-          {match("projects/digitalocean-controller") && (
-            <>
-              <DigitalOceanController />
-              <Spacer />
-            </>
-          )}
-          {match("projects/onewheel") && (
-            <>
-              <OneWheel />
-              <Spacer />
-            </>
-          )}
-          {match("projects/robotics") && (
-            <>
-              <Robotics />
-              <Spacer />
-            </>
-          )}
-        </>
-      )}
-      {/* TRUNCATION */}
-      {match("primatives/truncation") && (
-        <>
-          <Spacer />
-          <Hr />
-          <Spacer />
-          <BodyText style={{ textAlign: "center", fontStyle: "italic" }}>
-            This resume has been truncated for brevity and relevance. You can
-            access my full general resume at{" "}
-            <A href="https://resume.jackcrane.rocks">resume.jackcrane.rocks</A>
+          <BodyText style={{ marginTop: 0 }}>
+            {data.awards.map((award, i) => (
+              <SkillTitle style={{ display: "block" }}>{award}</SkillTitle>
+            ))}
           </BodyText>
-        </>
-      )}
+        </div>
+      </Row>
+      {/* EXPERIENCE */}
+      <>
+        <Spacer />
+        <Subtitle>Experience</Subtitle>
+        <Hr />
+        {data.experience.map((exp, i) => (
+          <div key={i}>
+            <Row>
+              <RowItem>
+                <SansSubtitle>
+                  {exp.company} <JobDescription>{exp.position}</JobDescription>
+                </SansSubtitle>
+              </RowItem>
+              <Date>{exp.date}</Date>
+            </Row>
+            {exp.projects &&
+              exp.projects.map((proj, i) => (
+                <BodyText
+                  key={i}
+                  style={{
+                    marginTop:
+                      bulletPreference === "bullet" ||
+                      bulletPreference === "both"
+                        ? 5
+                        : 0,
+                  }}
+                >
+                  {bulletPreference === "both" ||
+                  bulletPreference === "bullet" ? (
+                    <Row gap={5}>
+                      <BodyText style={{ margin: 0 }}>
+                        <B>{proj.title} </B>
+                      </BodyText>
+                      {proj?.icons?.map((icon, i) => (
+                        <>{switchForIcon(icon)}</>
+                      ))}
+                      <Hr
+                        style={{
+                          height: 2,
+                          background:
+                            "linear-gradient(270deg, transparent 0%, transparent 50px, rgb(170, 170, 170) 200px, rgb(170, 170, 170) 50%, rgb(170, 170, 170) 100%)",
+                        }}
+                      />
+                    </Row>
+                  ) : (
+                    ""
+                  )}
+                  <Row
+                    gap={bulletPreference === "both" ? 10 : 0}
+                    align={"flex-start"}
+                  >
+                    <BodyText
+                      style={{
+                        width: bulletPreference === "both" ? "50%" : null,
+                      }}
+                    >
+                      {bulletPreference === "bullet" ||
+                      bulletPreference === "both" ? (
+                        <BodyText style={{ marginTop: 0 }}>
+                          {proj.bullets.map((bullet, i) => (
+                            <SkillTitle key={i} style={{ display: "block" }}>
+                              {bullet}
+                            </SkillTitle>
+                          ))}
+                        </BodyText>
+                      ) : (
+                        ""
+                      )}
+                    </BodyText>
+                    <BodyText
+                      style={{
+                        width: bulletPreference === "both" ? "50%" : null,
+                      }}
+                    >
+                      {bulletPreference === "text" ||
+                      bulletPreference === "both" ? (
+                        <>
+                          <B>
+                            {bulletPreference === "text"
+                              ? proj.title + " - "
+                              : ""}
+                          </B>
+                          <BodyText style={{ textAlign: "justify", margin: 0 }}>
+                            {proj.description}
+                          </BodyText>
+                        </>
+                      ) : (
+                        ""
+                      )}
+                    </BodyText>
+                  </Row>
+                </BodyText>
+              ))}
+            <Spacer />
+          </div>
+        ))}
+      </>
+      {/* PROJECTS */}
+      <>
+        <Spacer />
+        <Subtitle>Projects</Subtitle>
+        <Hr />
+        {data.projects.map((project, i) => (
+          <>
+            <Row gap={5}>
+              <RowItem>
+                <SansSubtitle>{project.title}</SansSubtitle>
+                {project?.icons?.map((icon) => {
+                  return switchForIcon(icon);
+                })}
+                {project?.links?.map((link) => (
+                  <BodyText style={{ margin: 0 }}>
+                    [ <A href={link.href}>{link.text}</A> ]
+                  </BodyText>
+                ))}
+              </RowItem>
+              <Hr
+                style={{
+                  height: 2,
+                  background:
+                    "linear-gradient(270deg, transparent 0%, transparent 0px, rgb(170, 170, 170) 200px, rgb(170, 170, 170) 50%, rgb(170, 170, 170) 100%)",
+                }}
+              />
+              <Date>{project.date}</Date>
+            </Row>
+            <Row
+              gap={bulletPreference === "both" ? 10 : 0}
+              align={"flex-start"}
+            >
+              <BodyText
+                style={{
+                  width: bulletPreference === "both" ? "50%" : null,
+                }}
+              >
+                {bulletPreference === "both" ||
+                bulletPreference === "bullet" ? (
+                  <BodyText style={{ marginTop: 0 }}>
+                    {project.bullets.map((bullet, i) => (
+                      <SkillTitle key={i} style={{ display: "block" }}>
+                        {bullet}
+                      </SkillTitle>
+                    ))}
+                  </BodyText>
+                ) : (
+                  <></>
+                )}
+              </BodyText>
+              <BodyText
+                style={{
+                  width: bulletPreference === "both" ? "50%" : null,
+                }}
+              >
+                {bulletPreference === "both" || bulletPreference === "text" ? (
+                  <BodyText style={{ marginTop: 0, textAlign: "justify" }}>
+                    {project.description}
+                  </BodyText>
+                ) : (
+                  <></>
+                )}
+              </BodyText>
+            </Row>
+            <Spacer />
+          </>
+        ))}
+      </>
+      <Hr />
+      <BodyText style={{ textAlign: "center", fontStyle: "italic" }}>
+        This resume has been truncated for brevity and relevance. You can access
+        my full general resume at{" "}
+        <A href="https://resume.jackcrane.rocks">resume.jackcrane.rocks</A>
+      </BodyText>
+      <Spacer />
     </Page>
   );
-}
+};
 
 export default App;
