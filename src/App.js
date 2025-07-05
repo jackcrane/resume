@@ -333,7 +333,7 @@ const App = () => {
       {/* PROJECTS */}
       <>
         <Spacer />
-        <Subtitle>Projects</Subtitle>
+        <Subtitle>Passion Projects</Subtitle>
         <Hr />
         {data.projects.map((project, i) => (
           <>

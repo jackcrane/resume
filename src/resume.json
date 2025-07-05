@@ -8,12 +8,6 @@
       "longText": "jackcrane.rocks"
     },
     {
-      "icon": "icons/web.svg",
-      "href": "https://blog.jackcrane.rocks",
-      "text": "blog.jackcrane.rocks",
-      "longText": "blog.jackcrane.rocks"
-    },
-    {
       "icon": "icons/github.svg",
       "href": "https://github.com/jackcrane",
       "text": "jackcrane",
@@ -57,7 +51,7 @@
   "skills": [
     {
       "title": "UI Design/graphic design",
-      "fields": ["Figma"]
+      "fields": ["Figma", "Photoshop", "Illustrator"]
     },
     {
       "title": "Frontend software development",
@@ -73,11 +67,11 @@
     },
     {
       "title": "Native software development",
-      "fields": ["React Native (Expo)"]
+      "fields": ["React Native (Expo)", "Swift (SwiftUI)"]
     },
     {
       "title": "Data",
-      "fields": ["Matlab", "Python", "MySQL", "MongoDB", "Prisma"]
+      "fields": ["Matlab", "Python", "MySQL", "Postgres", "MongoDB", "Prisma"]
     },
     {
       "title": "Developer Ops",
@@ -92,17 +86,17 @@
       "fields": ["Arduino", "Raspberry Pi"]
     },
     {
-      "title": "3D Modelling",
+      "title": "CAD",
       "fields": ["Rhinocerous", "OnShape", "Solidworks"]
     },
     {
-      "title": "Digital Fabrication",
+      "title": "Additive Manufacturing",
       "fields": [
         "Makerbot ecosystem",
         "Prusa Slicer",
-        "Glowforge",
-        "SLA & FDM",
-        "Shop skills"
+        "Bambu Lab (FDM)",
+        "Stratasys (FDM, Polyjet, DLP)",
+        "Formlabs (SLS)"
       ]
     }
   ],
@@ -111,11 +105,11 @@
       "company": "Differential Dev Shop",
       "position": "Co-Op Software Developer",
       "location": "Cincinnati",
-      "date": "Oct 2022 - Present",
+      "date": "Oct 2022 - July 2024",
       "projects": [
         {
           "title": "Apollos",
-          "description": "I co-op'd at Differential on the Apollos team, developing mobile apps for megachurches. As part of the Frontend team, I played a key role in constructing our React Native template. Over the process of 31 merged PRs, I drove a feature that secured 3 clients, contributing to over $100k in revenue.",
+          "description": "I co-op'd at Differential on the Apollos team, developing a private-label social media platform. As part of the Frontend team, I played a key role in constructing our React Native template. Over the process of 31 merged PRs, I drove a feature that secured 3 clients, contributing to over $100k in revenue.",
           "bullets": [
             "One of 3 frontend React Native developers, but branched into fullstack",
             "31 merged Pull Requests over summer",
@@ -165,10 +159,19 @@
     },
     {
       "company": "Adventure Crew",
-      "position": "Freelance developer",
+      "position": "Freelance developer & Volunteer Coordinator",
       "location": "Cincinnati",
       "date": "Apr 2022 - Present",
       "projects": [
+        {
+          "title": "Volunteer Coordinator",
+          "description": "Served as volunteer coordinator, managing over 160 volunteers each year, providing information, serving as a liason between volunteers and leadership, and ensuring that our guests & volunteers had a great experience.",
+          "bullets": [
+            "Recruited, trained, and managed 157 volunteers",
+            "Served in the 6 member executive team, directing the event and ultimately raising $135,000 for Adventure Crew",
+            "Directed volunteers through 246 shifts"
+          ]
+        },
         {
           "title": "Paddlefest App",
           "description": "Developed a React Native mobile app, alongside Express and MySQL data modeling. The app was adopted by ~30% of participants, offering features like a live attraction map, photo sharing, and real-time safety notifications.",
@@ -185,18 +188,9 @@
           "bullets": [
             "Served for 4 months with 9 minutes of downtime (99.99% uptime)",
             "Serviced 157 volunteers who signed up for 246 total shifts",
-            "Saved Paddlefest leadership hours of work and hundreds of dollars by automating and customizing."
+            "Saved Paddlefest leadership human and financial capital by automating and customizing."
           ],
           "icons": ["react", "express", "mysql", "nodejs", "nextjs", "prisma"]
-        },
-        {
-          "title": "Volunteer Coordinator",
-          "description": "Served as volunteer coordinator, managing over 160 volunteers each year, providing information, serving as a liason between volunteers and leadership, and ensuring that our guests & volunteers had a great experience.",
-          "bullets": [
-            "Recruited, trained, and managed 157 volunteers",
-            "Participated in the 6 member executive team, directing the event and ultimately raising $135,000 for Adventure Crew",
-            "Directed volunteers through 246 shifts"
-          ]
         }
       ]
     },
@@ -207,12 +201,12 @@
       "date": "Aug 2022 - Present",
       "projects": [
         {
-          "title": "SLUCAM - Research Adjacent",
-          "description": "At the Saint Louis University Center for Additive Manufacturing, I am working to build out our understanding of Resin printing while learning about engineering for additive manufacturing, performing engineering analysis on models, and pre- and post- processing 3d prints to the highest quality for research labs in the university or other clients.",
+          "title": "SLU Center for Additive Manufacturing (SLUCAM) - Research Adjacent",
+          "description": "At the Saint Louis University Center for Additive Manufacturing, I work with engineering for additive manufacturing, focusing on documenting and providing education regarding SLUCAM' technologies, processes, and best practices. I have also built a custom project management platform for both SLUCAM and other SLU facilities, all while serving as primary liason between SLUCAM and public during tours & outreach.",
           "bullets": [
-            "Spearheaded our initiative to better understand and optimize our Resin 3d printing processes",
-            "Created a custom 3d print dashboard to monitor and control our quality as we refined our processes",
-            "Built a custom timelapse PCB to record high-quality videos"
+            "Developed technical documentation and standard operating procedures for SLUCAM",
+            "Served as primary liason between SLUCAM and public during tours & outreach",
+            "Developed a custom project management platform for the SLUCAM & other SLU facilities"
           ],
           "icons": [
             "react",
@@ -225,10 +219,11 @@
         },
         {
           "title": "Teacher's Assistant",
-          "description": "I am working with the SLU Mechanical Engineering department to help teach the \"ESCI 1701\" Engineering Fundamentals Studio course, teaching students an introduction to engineering design through an introduction to Solidworks and technical drawing.",
+          "description": "Developed the curriculum and lead a team of other TAs to teach the \"ESCI 1701\" Engineering Fundamentals Studio course, teaching students an introduction to engineering design through an introduction to Solidworks and technical drawing.",
           "bullets": [
-            "Taught students the basics of understanding Engineering design by directing them through a series of projects to help them understand \"design intent\".",
-            "Gave students their first taste in Solidworks and technical drawing, helping them begin thinking in 3d."
+            "Developed a Spatial Thinking, Technical Drawing, and Solidworks curriculum",
+            "Directed a team of 6-12 other TAs, setting their schedules, assigning work, and ensuring students recieved excellent instruction",
+            "Taught students the basics of understanding Engineering design by directing them through a series of projects to help them understand \"design intent\"."
           ],
           "icons": ["solidworks"]
         }
@@ -242,10 +237,10 @@
       "projects": [
         {
           "title": "MTS Xpress",
-          "description": "Developed a proof-of-concept app and the corresponding backend and database for internal use by Myers sales reps to quickly order consumable hardware. In tests, MTS Express improved efficiency by reducing lag time between a stock outage and a replacement order being placed. The idea has led to $300k+ in new revenue and has increased the value of orders",
+          "description": "Developed a proof-of-concept app and the corresponding backend and database for internal use by Myers sales reps to quickly order consumable hardware. In tests, MTS Express improved efficiency by reducing lag time between a stock outage and a replacement order being placed. The idea has led to over $3 million in new revenue in 2025 and has increased the value of orders 400% and average order value by 160%",
           "bullets": [
             "Rapid-prototyped an app to help pitch the idea to leadership",
-            "Led to $325,000 in new revenue from Xpress orders",
+            "Led to $3.2 million in new revenue from Xpress orders in 2025",
             "Increased average line item count by 400% and average order value by 160%",
             "Led to a 60% voluntary adoption rate among sales reps",
             "Reduced lag time between a stock outage and a replacement order being placed"
@@ -254,7 +249,7 @@
         },
         {
           "title": "Sales Reps reporting system",
-          "description": "Built a full-stack web app for internal use by Myers sales reps to view sales data. This app filled a gap in resources available to reps and allowed them to more easily analyze their data and performance. Featuring auth, role-based access control, high-performance data tables (with conditional formatting), and admin tools.",
+          "description": "Rapid prototyped a full-stack web app for internal use by Myers sales reps to view sales data. This app filled a gap in resources available to reps and allowed them to more easily analyze their data and performance. Featuring auth, role-based access control, high-performance data tables (with conditional formatting), and admin tools.",
           "bullets": [
             "Built a React/Express/MySQL app for Myers sales reps to view their sales data",
             "Earned a 70% voluntary rep adoption rate",
@@ -397,9 +392,9 @@
     {
       "title": "FIRST Robotics",
       "date": "2012 - Present",
-      "description": "Through over a decade, I have been involved in FIRST robotics, allowing me to participate in the world championship and to captain my high school team to the state championship 3 times, winning awards for teamwork, sportsmanship, documentation, software, and hardware design, as well as I earned the highest individual leadership award in the state.",
+      "description": "Through over a decade, I have been involved in FIRST robotics, allowing me to participate in the world championship and to captain my high school team to the state championship 3 years, winning awards for teamwork, sportsmanship, documentation, software, and hardware design, as well as I earned the highest individual leadership award in the state.",
       "bullets": [
-        "Founded and captained a team that competed in the state championship 3 of 4 times",
+        "Founded and captained high school a team that competed in the state championship 3 of 4 years",
         "Participated in the world championship.",
         "Earned the highest individual leadership award in the state",
         "Won awards for teamwork, sportsmanship, documentation, software, and hardware design"
@@ -411,6 +406,17 @@
         }
       ],
       "icons": ["first"]
+    },
+    {
+      "title": "EventPilot",
+      "date": "2025 - Present",
+      "description": "Built a platform to help event organizers manage their events, including volunteer management, task management, and customer relationship management. Integrating with Stripe for payments and Postmark for email.",
+      "bullets": [
+        "Built a React/Node.js/Express app for event organizers to manage their events",
+        "Integrated with Stripe for payments and Postmark for email",
+        "Developed a custom dashboard to help organizers manage their events"
+      ],
+      "icons": ["react", "nodejs", "express", "stripe", "postmark"]
     }
   ],
   "awards": [
