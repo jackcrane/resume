@@ -175,7 +175,7 @@ const AdminRow = ({ value, onChange, label }) => {
 
 const App = () => {
   const [useLongText, setUseLongText] = useState(false);
-  const [bulletPreference, setBulletPreference] = useState("both");
+  const [bulletPreference, setBulletPreference] = useState("bullet");
   return (
     <Page>
       {/* <CV /> */}
@@ -204,20 +204,28 @@ const App = () => {
           <Hr />
           <Row style={{ alignItems: "flex-start" }}>
             <SkillContainer>
-              {data.skills.slice(0, data.skills.length / 2).map((skill, i) => (
-                <Skills key={i}>
-                  <SkillTitle>{skill.title}</SkillTitle>{" "}
-                  <SkillDescription>{skill.fields.join(", ")}</SkillDescription>
-                </Skills>
-              ))}
+              {data.skills
+                .slice(0, Math.ceil(data.skills.length / 2))
+                .map((skill, i) => (
+                  <Skills key={i}>
+                    <SkillTitle>{skill.title}</SkillTitle>{" "}
+                    <SkillDescription>
+                      {skill.fields.join(", ")}
+                    </SkillDescription>
+                  </Skills>
+                ))}
             </SkillContainer>
             <SkillContainer>
-              {data.skills.slice(data.skills.length / 2).map((skill, i) => (
-                <Skills key={i}>
-                  <SkillTitle>{skill.title}</SkillTitle>{" "}
-                  <SkillDescription>{skill.fields.join(", ")}</SkillDescription>
-                </Skills>
-              ))}
+              {data.skills
+                .slice(Math.ceil(data.skills.length / 2))
+                .map((skill, i) => (
+                  <Skills key={i}>
+                    <SkillTitle>{skill.title}</SkillTitle>{" "}
+                    <SkillDescription>
+                      {skill.fields.join(", ")}
+                    </SkillDescription>
+                  </Skills>
+                ))}
             </SkillContainer>
           </Row>
         </div>
@@ -269,13 +277,14 @@ const App = () => {
                       {proj?.icons?.map((icon, i) => (
                         <>{switchForIcon(icon)}</>
                       ))}
-                      <Hr
+                      {/* <Hr
                         style={{
                           height: 2,
                           background:
                             "linear-gradient(270deg, transparent 0%, transparent 50px, rgb(170, 170, 170) 200px, rgb(170, 170, 170) 50%, rgb(170, 170, 170) 100%)",
                         }}
-                      />
+                      /> */}
+                      <div style={{ flex: 1 }} />
                     </Row>
                   ) : (
                     ""

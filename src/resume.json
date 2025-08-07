@@ -36,8 +36,8 @@
     {
       "school": "Saint Louis University",
       "location": "St. Louis, Missouri",
-      "shortDegree": "BS in Computer Science & Mechanical Engineering",
-      "degree": "Bachelor of Science in Computer Science & Mechanical Engineering",
+      "shortDegree": "BA in Computer Science & Mechanical Engineering",
+      "degree": "Bachelor of Arts in Computer Science & Mechanical Engineering",
       "date": "May 2026"
     },
     {
@@ -54,28 +54,16 @@
       "fields": ["Figma", "Photoshop", "Illustrator"]
     },
     {
-      "title": "Frontend software development",
-      "fields": ["React", "HTML", "CSS", "JS"]
-    },
-    {
-      "title": "Backend software development",
-      "fields": ["Node.js", "Deno", "Express", "PHP"]
-    },
-    {
-      "title": "Serverless software development",
-      "fields": ["Vercel", "Cloudflare"]
-    },
-    {
-      "title": "Native software development",
-      "fields": ["React Native (Expo)", "Swift (SwiftUI)"]
+      "title": "Software development",
+      "fields": ["JavaScript", "PHP", "Python", "C", "C++", "Java"]
     },
     {
       "title": "Data",
-      "fields": ["Matlab", "Python", "MySQL", "Postgres", "MongoDB", "Prisma"]
+      "fields": ["Matlab", "Python", "MySQL", "Postgres"]
     },
     {
-      "title": "Developer Ops",
-      "fields": ["Git", "Github", "GitLab", "Jira"]
+      "title": "Dev Ops",
+      "fields": ["Git", "Github"]
     },
     {
       "title": "Cloud Computing",
@@ -83,17 +71,22 @@
     },
     {
       "title": "Embedded Computing",
-      "fields": ["Arduino", "Raspberry Pi"]
+      "fields": ["Arduino", "Raspberry Pi", "atmega328p"]
     },
     {
       "title": "CAD",
-      "fields": ["Rhinocerous", "OnShape", "Solidworks"]
+      "fields": [
+        "Rhinocerous",
+        "OnShape",
+        "Solidworks",
+        "Fusion 360",
+        "Materialize 3-Matic",
+        "Design for Additive"
+      ]
     },
     {
       "title": "Additive Manufacturing",
       "fields": [
-        "Makerbot ecosystem",
-        "Prusa Slicer",
         "Bambu Lab (FDM)",
         "Stratasys (FDM, Polyjet, DLP)",
         "Formlabs (SLS)"
@@ -101,6 +94,42 @@
     }
   ],
   "experience": [
+    {
+      "company": "Saint Louis University",
+      "position": "Additive Manufacturing Technician & Teacher's Assistant (Mech. Engineering)",
+      "location": "St. Louis",
+      "date": "Aug 2022 - Present",
+      "projects": [
+        {
+          "title": "SLU Center for Additive Manufacturing (SLUCAM) - Research Adjacent",
+          "description": "At the Saint Louis University Center for Additive Manufacturing, I work with engineering for additive manufacturing, focusing on documenting and providing education regarding SLUCAM' technologies, processes, and best practices. I have also built a custom project management platform for both SLUCAM and other SLU facilities, all while serving as primary liason between SLUCAM and public during tours & outreach.",
+          "bullets": [
+            "Developed technical documentation and standard operating procedures for SLUCAM",
+            "Served as primary liason between SLUCAM and public during tours & outreach",
+            "Developed a custom project management platform for the SLUCAM & other SLU facilities",
+            "Reviewed and interfaced with customers to optimize designs for Additive processes, then prioritized, scheduled, and processed print jobs on systems ranging from consumer to industrial FDM to DLP & SLA, Polyjet, SLS, and fusion processes."
+          ],
+          "icons": [
+            "react",
+            "express",
+            "mysql",
+            "nodejs",
+            "makerbot",
+            "arduino"
+          ]
+        },
+        {
+          "title": "Teacher's Assistant",
+          "description": "Developed the curriculum and lead a team of other TAs to teach the \"ESCI 1701\" Engineering Fundamentals Studio course, teaching students an introduction to engineering design through an introduction to Solidworks and technical drawing.",
+          "bullets": [
+            "Developed a Spatial Thinking, Technical Drawing, and Solidworks curriculum",
+            "Directed a team of 6-12 other TAs, setting their schedules, assigning work, and ensuring students recieved excellent instruction",
+            "Taught students the basics of understanding Engineering design by directing them through a series of projects to help them understand \"design intent\"."
+          ],
+          "icons": ["solidworks"]
+        }
+      ]
+    },
     {
       "company": "Differential Dev Shop",
       "position": "Co-Op Software Developer",
@@ -131,105 +160,6 @@
       ]
     },
     {
-      "company": "Crane Consumables",
-      "position": "Freelance developer",
-      "location": "Dayton",
-      "date": "Aug 2022 - Present",
-      "projects": [
-        {
-          "title": "Multi-Tenant Distributable E-Commerce Platform",
-          "description": "Built a multi-tenant e-commerce platform that Crane Consumables could sell to their customers, who would put their branding on it and offer it as an online store to their customers. Crane Consumables would handle fulfillment and store management.",
-          "bullets": [
-            "Designed and built a multi-tenant platform including scoped accounts and permissions",
-            "Secured a security-critical application using e2e and at-rest encryption",
-            "Integrated with Stripe"
-          ],
-          "icons": [
-            "nextjs",
-            "nodejs",
-            "express",
-            "react",
-            "mysql",
-            "prisma",
-            "styledcomponents",
-            "stripe"
-          ]
-        }
-      ]
-    },
-    {
-      "company": "Adventure Crew",
-      "position": "Freelance developer & Volunteer Coordinator",
-      "location": "Cincinnati",
-      "date": "Apr 2022 - Present",
-      "projects": [
-        {
-          "title": "Volunteer Coordinator",
-          "description": "Served as volunteer coordinator, managing over 160 volunteers each year, providing information, serving as a liason between volunteers and leadership, and ensuring that our guests & volunteers had a great experience.",
-          "bullets": [
-            "Recruited, trained, and managed 157 volunteers",
-            "Served in the 6 member executive team, directing the event and ultimately raising $135,000 for Adventure Crew",
-            "Directed volunteers through 246 shifts"
-          ]
-        },
-        {
-          "title": "Paddlefest App",
-          "description": "Developed a React Native mobile app, alongside Express and MySQL data modeling. The app was adopted by ~30% of participants, offering features like a live attraction map, photo sharing, and real-time safety notifications.",
-          "bullets": [
-            "Built a React Native app for with a 30% participant adoption rate",
-            "Seamlessly delivered real-time updates to participants",
-            "Recieved overwhelmingly positive feedback from users"
-          ],
-          "icons": ["react", "ios", "express", "mysql", "nodejs", "expo"]
-        },
-        {
-          "title": "Volunteer Management System",
-          "description": "Deployed a Next.js web app with an Express and MySQL backend, enabling 150+ volunteers to register seamlessly. The Paddlefest VMS empowered leadership to manage volunteers pre-event and on-site, enhancing existing management processes.",
-          "bullets": [
-            "Served for 4 months with 9 minutes of downtime (99.99% uptime)",
-            "Serviced 157 volunteers who signed up for 246 total shifts",
-            "Saved Paddlefest leadership human and financial capital by automating and customizing."
-          ],
-          "icons": ["react", "express", "mysql", "nodejs", "nextjs", "prisma"]
-        }
-      ]
-    },
-    {
-      "company": "Saint Louis University",
-      "position": "Student Worker & Teacher's Assistant",
-      "location": "St. Louis",
-      "date": "Aug 2022 - Present",
-      "projects": [
-        {
-          "title": "SLU Center for Additive Manufacturing (SLUCAM) - Research Adjacent",
-          "description": "At the Saint Louis University Center for Additive Manufacturing, I work with engineering for additive manufacturing, focusing on documenting and providing education regarding SLUCAM' technologies, processes, and best practices. I have also built a custom project management platform for both SLUCAM and other SLU facilities, all while serving as primary liason between SLUCAM and public during tours & outreach.",
-          "bullets": [
-            "Developed technical documentation and standard operating procedures for SLUCAM",
-            "Served as primary liason between SLUCAM and public during tours & outreach",
-            "Developed a custom project management platform for the SLUCAM & other SLU facilities"
-          ],
-          "icons": [
-            "react",
-            "express",
-            "mysql",
-            "nodejs",
-            "makerbot",
-            "arduino"
-          ]
-        },
-        {
-          "title": "Teacher's Assistant",
-          "description": "Developed the curriculum and lead a team of other TAs to teach the \"ESCI 1701\" Engineering Fundamentals Studio course, teaching students an introduction to engineering design through an introduction to Solidworks and technical drawing.",
-          "bullets": [
-            "Developed a Spatial Thinking, Technical Drawing, and Solidworks curriculum",
-            "Directed a team of 6-12 other TAs, setting their schedules, assigning work, and ensuring students recieved excellent instruction",
-            "Taught students the basics of understanding Engineering design by directing them through a series of projects to help them understand \"design intent\"."
-          ],
-          "icons": ["solidworks"]
-        }
-      ]
-    },
-    {
       "company": "Myers Industries",
       "position": "Freelance developer",
       "location": "Akron",
@@ -246,50 +176,23 @@
             "Reduced lag time between a stock outage and a replacement order being placed"
           ],
           "icons": ["react", "ios", "express", "mysql", "nodejs"]
-        },
-        {
-          "title": "Sales Reps reporting system",
-          "description": "Rapid prototyped a full-stack web app for internal use by Myers sales reps to view sales data. This app filled a gap in resources available to reps and allowed them to more easily analyze their data and performance. Featuring auth, role-based access control, high-performance data tables (with conditional formatting), and admin tools.",
-          "bullets": [
-            "Built a React/Express/MySQL app for Myers sales reps to view their sales data",
-            "Earned a 70% voluntary rep adoption rate",
-            "Provides an average time on page of 44 seconds, meaning users are able to quickly find the information they need"
-          ],
-          "icons": ["react", "express", "mysql", "s3", "nodejs", "prisma"]
         }
       ]
     },
     {
-      "company": "iSPACE",
-      "position": "STEM Teacher & Curriculum Author",
+      "company": "Adventure Crew",
+      "position": "Freelance developer & Volunteer Coordinator",
       "location": "Cincinnati",
-      "date": "Summers 2016 - 2021",
+      "date": "Apr 2022 - Present",
       "projects": [
         {
-          "title": "Camp Teacher",
-          "description": "Taught camps to students ages K-12 focused around STEM, including Robotics, Scratch & Python programming, Chemistry, and Physics. Over six years, I taught over 35 weeks of camp, teaching an estimated 700 students. I was awarded the Presidential Volunteer Service Award five times because of my volunteer work at iSPACE.",
+          "title": "Volunteer Coordinator",
+          "description": "Served as volunteer coordinator, managing over 160 volunteers each year, providing information, serving as a liason between volunteers and leadership, and ensuring that our guests & volunteers had a great experience.",
           "bullets": [
-            "Taught over 35 weeks of camp, teaching an estimated 700 students",
-            "Awarded the Presidential Volunteer Service Award five times because of my volunteer work at iSPACE",
-            "Taught classes in chemistry, physics, robotics, web development, Python, and Scratch focused camps."
-          ],
-          "icons": ["python", "scratch"]
-        }
-      ]
-    },
-    {
-      "company": "Perfect North Slopes",
-      "position": "Instructor",
-      "location": "Lawrenceburg",
-      "date": "Winters 2020 - Present",
-      "projects": [
-        {
-          "title": "Kids ski instructor",
-          "description": "Taught ski lessons for kids ages 5-12. This job refined my teaching skills over my experience of taking over 300 kids who have never been on the snow before to their first chairlift ride and farther. I learned invaluable leadership and education skills while teaching kids my passion.",
-          "bullets": [
-            "Taught ski lessons for kids ages 5-12",
-            "Took over 300 kids who have never been on the snow before to their first chairlift ride and farther",
-            "Learned invaluable leadership and education skills while teaching kids my passion"
+            "Recruited, trained, and managed 650+ volunteers over 4 years",
+            "Served in the 6 member executive team, directing the event and ultimately raising a yearly average of $135,000 for Adventure Crew",
+            "Directed volunteers through 246 shifts",
+            "Developed a volunteer registration & management system"
           ]
         }
       ]
@@ -297,107 +200,34 @@
   ],
   "projects": [
     {
-      "title": "Sales Loop",
-      "date": "June 2023 - Present",
-      "description": "Building a platform to help distributors and manufacturers sell more products by increasing the efficiency of their sales reps without redesigning existing procedures. Involved creating a React Native app, a Next.js admin panel, and a sturdy backend. React Native (Expo), Node.js, MySQL (Prisma), Cloudflare.",
+      "title": "2d23d2",
+      "date": "2025 - Present",
       "bullets": [
-        "Built a full React Native barcode scanner app",
-        "Built a powerful admin panel for company admins to manage their sales reps and monitor performance",
-        "Designed a robust backend to handle the complex data structures and relationships"
-      ],
-      "icons": [
-        "nextjs",
-        "react",
-        "expo",
-        "nodejs",
-        "express",
-        "prisma",
-        "mysql"
-      ]
-    },
-    {
-      "title": "OG Image Generator",
-      "date": "Aug 2021 - Present",
-      "description": "This open source project with over 100,000 monthy hits dynamically generates social media preview images for over 6,000 different websites. Node.js, MongoDB, Cloudflare.",
-      "bullets": [
-        "100,000+ monthly hits, generating images for 6,000+ websites",
-        "Built on Node.js, React, MySQL, and Cloudflare"
+        "Three.js powered web app that extrudes a 2d shape into individual 3d objects for textile 3d printing",
+        "Custom image processing to compute pixel height and color to print",
+        "Procedural 3d object generation at runtime allows rapid file iteration for stylized polyjet textile printing"
       ],
       "links": [
         {
-          "text": "og-image.xyz",
-          "href": "https://og-image.xyz"
+          "text": "2d23d2.jackcrane.rocks",
+          "href": "https://2d23d2.jackcrane.rocks"
         },
         {
-          "text": "go.jackcrane.rocks/blog/og-image",
-          "href": "https://go.jackcrane.rocks/blog/og-image"
-        }
-      ],
-      "icons": ["react", "nodejs", "mysql"]
-    },
-    {
-      "title": "Apple Music Presence",
-      "date": "Mar 2022 - June 2023",
-      "description": "This project integrates with Apple Music and Discord on Macs, allowing users to share the music they are listening to. This project has 79 GitHub stars and roughly 200 new users per month. JS, S3, Node.js.",
-      "bullets": [
-        "79 GitHub stars, 4 forks, and roughly 200 new users per month",
-        "Built on Node.js and S3",
-        "Over 400,000 listens registered"
-      ],
-      "links": [
-        {
-          "text": "go.jackcrane.rocks/blog/amp",
-          "href": "https://go.jackcrane.rocks/blog/amp"
-        }
-      ],
-      "icons": ["nodejs", "s3"]
-    },
-    {
-      "title": "Ohio River Way",
-      "date": "May 2023 - July 2023",
-      "description": "The Ohio River Way approached me to build a mobile app for paddlers to use as they experience the outdoors on the Ohio River. The result is a very simple app that links to important resources for paddlers, including river conditions, weather, and safety information. React Native (Expo), Node.js, MySQL (Prisma), Cloudflare.",
-      "bullets": [
-        "Built on React Native (Expo), Node.js, MySQL (Prisma), Cloudflare",
-        "Developed an app wholely driven by the client's needs",
-        "Safety and legal widgets forced a high expectation of quality",
-        "Included location-based experiences"
-      ],
-      "icons": ["expo", "react", "ios", "android"]
-    },
-    {
-      "title": "DigitalOcean Controller",
-      "date": "Jul 2021 - May 2022",
-      "description": "Although never released, this mobile app allows DigitalOcean customers to control their accounts. This project caught the attention of DigitalOcean and I got to meet some of their engineers. React Native (Expo), Cloudflare Functions.",
-      "bullets": [
-        "Caught the attention of DigitalOcean and I got to meet some of their engineers",
-        "Built on React Native (Expo), Cloudflare Functions, and DigitalOcean's API"
-      ],
-      "icons": ["react", "expo", "digitalocean", "cloudflare"]
-    },
-    {
-      "title": "OneWheel",
-      "date": "Aug 2022 - Present",
-      "description": "This project, my first individual exploration into mechanical engineering, is a clone of a OneWheel self-balancing skateboard. This project is still in progress and is 100% originally designed. OnShape, Arduino.",
-      "bullets": [
-        "100% originally designed, manufactured, and programmed",
-        "Built on OnShape and Arduino"
-      ],
-      "links": [
-        {
-          "text": "go.jackcrane.rocks/blog/onewheel",
-          "href": "https://go.jackcrane.rocks/blog/onewheel"
+          "text": "(demo) https://youtu.be/XgM995ynPd8",
+          "href": "https://youtu.be/XgM995ynPd8"
         }
       ]
     },
     {
       "title": "FIRST Robotics",
-      "date": "2012 - Present",
+      "date": "2012 - 2022",
       "description": "Through over a decade, I have been involved in FIRST robotics, allowing me to participate in the world championship and to captain my high school team to the state championship 3 years, winning awards for teamwork, sportsmanship, documentation, software, and hardware design, as well as I earned the highest individual leadership award in the state.",
       "bullets": [
         "Founded and captained high school a team that competed in the state championship 3 of 4 years",
         "Participated in the world championship.",
         "Earned the highest individual leadership award in the state",
-        "Won awards for teamwork, sportsmanship, documentation, software, and hardware design"
+        "Won awards for teamwork, sportsmanship, documentation, software, and hardware design",
+        "Mentored/coached an inner city high school team and FTA/Emceed tournaments"
       ],
       "links": [
         {
@@ -406,17 +236,6 @@
         }
       ],
       "icons": ["first"]
-    },
-    {
-      "title": "EventPilot",
-      "date": "2025 - Present",
-      "description": "Built a platform to help event organizers manage their events, including volunteer management, task management, and customer relationship management. Integrating with Stripe for payments and Postmark for email.",
-      "bullets": [
-        "Built a React/Node.js/Express app for event organizers to manage their events",
-        "Integrated with Stripe for payments and Postmark for email",
-        "Developed a custom dashboard to help organizers manage their events"
-      ],
-      "icons": ["react", "nodejs", "express", "stripe", "postmark"]
     }
   ],
   "awards": [
