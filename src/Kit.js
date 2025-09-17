@@ -155,6 +155,7 @@ export const CvText = styled(BodyText)`
   margin-left: 0.5in;
   margin-right: 0.5in;
   margin-top: 0.25in;
+  font-size: 10pt;
 `;
 export const AdminRowContainer = styled.div`
   border: 1px solid #f0f0f0;
