@@ -174,6 +174,12 @@ const AdminRow = ({ value, onChange, label }) => {
 };
 
 const App = () => {
+  useEffect(() => {
+    if (window.innerWidth < 780) {
+      window.location.href = "/resume.pdf";
+    }
+  }, []);
+
   const [useLongText, setUseLongText] = useState(false);
   const [bulletPreference, setBulletPreference] = useState("bullet");
   return (
