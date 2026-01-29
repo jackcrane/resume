@@ -180,6 +180,23 @@ const App = () => {
     }
   }, []);
 
+  const f = (items) => {
+    return items.filter((item) => (item.show === false ? false : true));
+  };
+
+  // Order by .sort key
+  const o = (items) => {
+    return items.sort((a, b) => {
+      if (a.sort < b.sort) {
+        return -1;
+      }
+      if (a.sort > b.sort) {
+        return 1;
+      }
+      return 0;
+    });
+  };
+
   const [useLongText, setUseLongText] = useState(false);
   const [bulletPreference, setBulletPreference] = useState("bullet");
   return (
@@ -191,7 +208,7 @@ const App = () => {
         <Spacer />
         <Subtitle>Education</Subtitle>
         <Hr />
-        {data.education.map((edu, i) => (
+        {f(data.education).map((edu, i) => (
           <Row key={i}>
             <RowItem>
               <SansSubtitle>{edu.school}</SansSubtitle>
@@ -210,7 +227,7 @@ const App = () => {
           <Hr />
           <Row style={{ alignItems: "flex-start" }}>
             <SkillContainer>
-              {data.skills
+              {o(f(data.skills))
                 .slice(0, Math.ceil(data.skills.length / 2))
                 .map((skill, i) => (
                   <Skills key={i}>
@@ -222,7 +239,7 @@ const App = () => {
                 ))}
             </SkillContainer>
             <SkillContainer>
-              {data.skills
+              {o(f(data.skills))
                 .slice(Math.ceil(data.skills.length / 2))
                 .map((skill, i) => (
                   <Skills key={i}>
@@ -241,7 +258,7 @@ const App = () => {
           <Subtitle>Awards & Certifications</Subtitle>
           <Hr />
           <BodyText style={{ marginTop: 0 }}>
-            {data.awards.map((award, i) => (
+            {f(data.awards).map((award, i) => (
               <SkillTitle style={{ display: "block" }}>{award}</SkillTitle>
             ))}
           </BodyText>
@@ -252,7 +269,7 @@ const App = () => {
         <Spacer />
         <Subtitle>Experience</Subtitle>
         <Hr />
-        {data.experience.map((exp, i) => (
+        {f(data.experience).map((exp, i) => (
           <div key={i}>
             <Row>
               <RowItem>
@@ -350,7 +367,7 @@ const App = () => {
         <Spacer />
         <Subtitle>Passion Projects</Subtitle>
         <Hr />
-        {data.projects.map((project, i) => (
+        {f(data.projects).map((project, i) => (
           <>
             <Row gap={5}>
               <RowItem>
@@ -364,13 +381,6 @@ const App = () => {
                   </BodyText>
                 ))}
               </RowItem>
-              <Hr
-                style={{
-                  height: 2,
-                  background:
-                    "linear-gradient(270deg, transparent 0%, transparent 0px, rgb(170, 170, 170) 200px, rgb(170, 170, 170) 50%, rgb(170, 170, 170) 100%)",
-                }}
-              />
               <Date>{project.date}</Date>
             </Row>
             <Row
@@ -407,6 +417,45 @@ const App = () => {
                 ) : (
                   <></>
                 )}
+              </BodyText>
+            </Row>
+            <Spacer />
+          </>
+        ))}
+      </>
+      {/* PROJECTS */}
+      <>
+        <Spacer />
+        <Subtitle>Publications</Subtitle>
+        <Hr />
+        {data.publications.map((pub, i) => (
+          <>
+            <Row gap={5}>
+              <RowItem>
+                <SansSubtitle>{pub.title}</SansSubtitle>
+                {pub?.icons?.map((icon) => {
+                  return switchForIcon(icon);
+                })}
+                {pub?.links?.map((link) => (
+                  <BodyText style={{ margin: 0 }}>
+                    [ <A href={link.href}>{link.text}</A> ]
+                  </BodyText>
+                ))}
+              </RowItem>
+              <Date>{pub.date}</Date>
+            </Row>
+            <Row
+              gap={bulletPreference === "both" ? 10 : 0}
+              align={"flex-start"}
+            >
+              <BodyText
+                style={{
+                  width: bulletPreference === "both" ? "50%" : null,
+                }}
+              >
+                <BodyText style={{ marginTop: 0, textAlign: "justify" }}>
+                  {pub.description}
+                </BodyText>
               </BodyText>
             </Row>
             <Spacer />

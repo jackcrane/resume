@@ -36,11 +36,12 @@
     {
       "school": "Saint Louis University",
       "location": "St. Louis, Missouri",
-      "shortDegree": "BA in Computer Science & Mechanical Engineering",
-      "degree": "Bachelor of Arts in Computer Science & Mechanical Engineering",
+      "shortDegree": "BA in Computer Science",
+      "degree": "Bachelor of Arts in Computer Science",
       "date": "May 2026"
     },
     {
+      "show": false,
       "school": "Summit Country Day School",
       "location": "Cincinnati, Ohio",
       "shortDegree": "High School Diploma",
@@ -50,30 +51,47 @@
   ],
   "skills": [
     {
+      "sort": 5,
       "title": "UI Design/graphic design",
       "fields": ["Figma", "Photoshop", "Illustrator"]
     },
     {
-      "title": "Software development",
-      "fields": ["JavaScript", "PHP", "Python", "C", "C++", "Java"]
+      "sort": 4,
+      "title": "Programming Languages",
+      "fields": [
+        "JavaScript",
+        "PHP",
+        "Python",
+        "C",
+        "C++",
+        "Java",
+        "Matlab",
+        "R",
+        "SQL"
+      ]
     },
     {
+      "sort": 6,
       "title": "Data",
-      "fields": ["Matlab", "Python", "MySQL", "Postgres"]
+      "fields": ["Matlab", "Python", "MySQL", "Postgres", "R"]
     },
     {
+      "sort": 7,
       "title": "Dev Ops",
       "fields": ["Git", "Github"]
     },
     {
+      "sort": 8,
       "title": "Cloud Computing",
-      "fields": ["Kubernetes", "DigitalOcean"]
+      "fields": ["Kubernetes", "DigitalOcean", "EC2", "Linux", "Windows Server"]
     },
     {
+      "sort": 9,
       "title": "Embedded Computing",
       "fields": ["Arduino", "Raspberry Pi", "atmega328p"]
     },
     {
+      "sort": 2,
       "title": "CAD",
       "fields": [
         "Rhinocerous",
@@ -85,6 +103,7 @@
       ]
     },
     {
+      "sort": 1,
       "title": "Additive Manufacturing",
       "fields": [
         "Bambu Lab (FDM)",
@@ -180,6 +199,7 @@
       ]
     },
     {
+      "show": false,
       "company": "Adventure Crew",
       "position": "Freelance developer & Volunteer Coordinator",
       "location": "Cincinnati",
@@ -204,7 +224,6 @@
       "date": "2025 - Present",
       "bullets": [
         "Three.js powered web app that extrudes a 2d shape into individual 3d objects for textile 3d printing",
-        "Custom image processing to compute pixel height and color to print",
         "Procedural 3d object generation at runtime allows rapid file iteration for stylized polyjet textile printing"
       ],
       "links": [
@@ -229,13 +248,33 @@
         "Won awards for teamwork, sportsmanship, documentation, software, and hardware design",
         "Mentored/coached an inner city high school team and FTA/Emceed tournaments"
       ],
+      "icons": ["first"]
+    }
+  ],
+  "publications": [
+    {
+      "title": "Visualizing Machine Learning with a Fluid Simulation",
+      "journal": "SLU ForALL Math Magazine",
+      "date": "March 2025",
+      "description": "This paper shows how handwritten numbers can be recognized by simulating how water would flow over their shapes and using those flow patterns to tell digits apart. It uses this physical analogy to make machine learning ideas more visual and intuitive, rather than relying on complex AI models.",
       "links": [
         {
-          "text": "go.jackcrane.rocks/blog/robotics",
-          "href": "https://go.jackcrane.rocks/blog/robotics"
+          "text": "https://go.jackcrane.rocks/vmlwfs",
+          "href": "https://go.jackcrane.rocks/vmlwfs"
         }
-      ],
-      "icons": ["first"]
+      ]
+    },
+    {
+      "title": "Translating Images into Voxel Print-ready slices",
+      "journal": "SLU Center for Additive Manufacturing",
+      "date": "Jan 2026",
+      "description": "This paper describes a workflow for converting standard 2D images into voxel-level, material-specific slice files for Stratasys PolyJet printers, enabling prints that go beyond traditional mesh-based geometry. It combines ICC-based color correction with stochastic halftoning to map image color, transparency, and luminance directly to per-voxel material assignments suitable for Voxel Print systems.",
+      "links": [
+        {
+          "text": "https://go.jackcrane.rocks/voxel-print",
+          "href": "https://go.jackcrane.rocks/voxel-print"
+        }
+      ]
     }
   ],
   "awards": [
@@ -243,7 +282,6 @@
     "FIRST Dean's List Finalist",
     "Private Pilot's License",
     "Volunteer of the Year (Adventure Crew)",
-    "Summit Country Day Excellence in Technology Award",
-    "Boeing mentorship program participant"
+    "Summit Country Day Excellence in Technology Award"
   ]
 }
