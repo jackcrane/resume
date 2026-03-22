@@ -201,7 +201,6 @@ const App = () => {
   const [bulletPreference, setBulletPreference] = useState("bullet");
   return (
     <Page>
-      {/* <CV /> */}
       <Name headerLinks={data.headerLinks} useLongText={useLongText} />
       {/* EDUCATION */}
       <>
