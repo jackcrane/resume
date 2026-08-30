@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useHotkeys } from "react-hotkeys-hook";
 import { useRef } from "react";
 import { useEffect } from "react";
+import { parse } from "jsonc-parser";
 import {
   Ispace,
   Perfect,
@@ -42,7 +43,6 @@ import {
 } from "./Kit";
 import { CV } from "./CV";
 import { Name } from "./Name";
-import data from "./resume.json";
 import {
   SiAmazons3,
   SiAndroid,
@@ -174,10 +174,18 @@ const AdminRow = ({ value, onChange, label }) => {
 };
 
 const App = () => {
+  const [data, setData] = useState(null);
+
   useEffect(() => {
     if (window.innerWidth < 780) {
       window.location.href = "/resume.pdf";
     }
+  }, []);
+
+  useEffect(() => {
+    fetch("/resume.jsonc")
+      .then((response) => response.text())
+      .then((text) => setData(parse(text)));
   }, []);
 
   const f = (items) => {
@@ -199,6 +207,11 @@ const App = () => {
 
   const [useLongText, setUseLongText] = useState(false);
   const [bulletPreference, setBulletPreference] = useState("bullet");
+
+  if (!data) {
+    return null;
+  }
+
   return (
     <Page>
       <Name

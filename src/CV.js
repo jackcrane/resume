@@ -1,10 +1,9 @@
 import { Hr, CvParent, CvText, Spacer } from "./Kit";
 import { Name } from "./Name";
-import data from "./resume.json";
 
-export const CV = () => (
+export const CV = ({ headerLinks = [] }) => (
   <CvParent>
-    <Name headerLinks={data.headerLinks} />
+    <Name headerLinks={headerLinks} />
     <CvText>
       {new window.Date().toLocaleDateString("en-US", {
         year: "numeric",
