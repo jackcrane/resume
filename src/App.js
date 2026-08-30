@@ -185,7 +185,7 @@ const App = () => {
   useEffect(() => {
     fetch("/resume.jsonc")
       .then((response) => response.text())
-      .then((text) => setData(parse(text)));
+      .then((text) => setData(parse(text, [], { allowTrailingComma: true })));
   }, []);
 
   const f = (items) => {
@@ -405,14 +405,19 @@ const App = () => {
           <>
             <Row gap={5}>
               <RowItem>
-                <SansSubtitle>{project.title}</SansSubtitle>
+                <SansSubtitle>
+                  {project.title}{" "}
+                  {project.position && (
+                    <JobDescription>{project.position}</JobDescription>
+                  )}
+                </SansSubtitle>
                 {data.showIcons &&
                   project?.icons?.map((icon) => {
                     return switchForIcon(icon);
                   })}
                 {project?.links?.map((link) => (
                   <BodyText style={{ margin: 0 }}>
-                    [ <A href={link.href}>{link.text}</A> ]
+                    [ <A href={link.href}>{link.text}</A> ] {link.note}
                   </BodyText>
                 ))}
               </RowItem>
@@ -474,7 +479,7 @@ const App = () => {
                   })}
                 {pub?.links?.map((link) => (
                   <BodyText style={{ margin: 0 }}>
-                    [ <A href={link.href}>{link.text}</A> ]
+                    [ <A href={link.href}>{link.text}</A> ] {link.note}
                   </BodyText>
                 ))}
               </RowItem>
@@ -498,13 +503,6 @@ const App = () => {
           </>
         ))}
       </>
-      <Hr />
-      <BodyText style={{ textAlign: "center", fontStyle: "italic" }}>
-        This resume has been truncated for brevity and relevance. You can access
-        my full general resume at{" "}
-        <A href="https://resume.jackcrane.rocks">resume.jackcrane.rocks</A>
-      </BodyText>
-      <Spacer />
     </Page>
   );
 };

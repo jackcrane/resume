@@ -1,6 +1,6 @@
 {
   "name": "Jack Crane",
-  "summary": "Software engineer with experience beyond traditional early-career scope, including end-to-end ownership of production enterprise applications and responsibilities typically assigned to senior engineers. Experienced in leading technical direction, building scalable AI and data systems, and partnering with executives and engineering teams to deliver high-impact products.",
+  "summary": "Software engineer with 6+ years of professional experience and a track record beyond traditional early-career scope, including end-to-end ownership of production enterprise applications and responsibilities typically assigned to senior engineers. Experienced in leading technical direction, building scalable AI and data systems, and partnering with executives and engineering teams to deliver high-impact products.",
   "showSkills": false,
   "showAwardsAndCertifications": false,
   "showIcons": false,
@@ -9,32 +9,32 @@
       "icon": "icons/web.svg",
       "href": "https://jackcrane.rocks",
       "text": "https://jackcrane.rocks",
-      "longText": "jackcrane.rocks"
+      "longText": "jackcrane.rocks",
     },
     {
       "icon": "icons/github.svg",
       "href": "https://github.com/jackcrane",
       "text": "github.com/jackcrane",
-      "longText": "github.com/jackcrane"
+      "longText": "github.com/jackcrane",
     },
     {
       "icon": "icons/linkedin.svg",
       "href": "https://linkedin.com/in/jackcranee",
       "text": "linkedin.com/in/jackcranee",
-      "longText": "linkedin.com/in/jackcranee"
+      "longText": "linkedin.com/in/jackcranee",
     },
     {
       "icon": "icons/phone.svg",
       "href": "tel:5136289360",
       "text": "513-628-9360",
-      "longText": "513-628-9360"
+      "longText": "513-628-9360",
     },
     {
       "icon": "icons/email.svg",
       "href": "mailto:jack@jackcrane.rocks",
       "text": "jack@jackcrane.rocks",
-      "longText": "jack@jackcrane.rocks"
-    }
+      "longText": "jack@jackcrane.rocks",
+    },
   ],
   "education": [
     {
@@ -42,7 +42,7 @@
       "location": "St. Louis, Missouri",
       "shortDegree": "BA in Computer Science",
       "degree": "Bachelor of Arts in Computer Science",
-      "date": "May 2026"
+      "date": "May 2026",
     },
     {
       "show": false,
@@ -50,8 +50,8 @@
       "location": "Cincinnati, Ohio",
       "shortDegree": "High School Diploma",
       "degree": "High School Diploma",
-      "date": "May 2022"
-    }
+      "date": "May 2022",
+    },
   ],
   "skills": [
     {
@@ -67,28 +67,34 @@
         "Matlab",
         "R",
         "SQL",
-        "Go"
-      ]
+        "Go",
+      ],
     },
     {
       "sort": 6,
       "title": "Data",
-      "fields": ["Matlab", "Python", "MySQL", "Postgres", "R"]
+      "fields": ["Matlab", "Python", "MySQL", "Postgres", "R"],
     },
     {
       "sort": 7,
       "title": "Dev Ops",
-      "fields": ["Git", "Github", "Terraform", "Temporal"]
+      "fields": ["Git", "Github", "Terraform", "Temporal"],
     },
     {
       "sort": 8,
       "title": "Cloud Computing",
-      "fields": ["Kubernetes", "DigitalOcean", "EC2", "Linux", "Windows Server"]
+      "fields": [
+        "Kubernetes",
+        "DigitalOcean",
+        "EC2",
+        "Linux",
+        "Windows Server",
+      ],
     },
     {
       "sort": 9,
       "title": "Embedded Computing",
-      "fields": ["Arduino", "Raspberry Pi", "atmega328p"]
+      "fields": ["Arduino", "Raspberry Pi", "atmega328p"],
     },
     {
       "sort": 2,
@@ -99,9 +105,9 @@
         "Solidworks",
         "Fusion 360",
         "Materialize 3-Matic",
-        "Design for Additive"
-      ]
-    }
+        "Design for Additive",
+      ],
+    },
   ],
   "experience": [
     {
@@ -114,25 +120,27 @@
           "description": "Own end-to-end development of an enterprise platform that turns AI usage and cost data into actionable adoption, budgeting, trend-analysis, and cost-optimization insights for leaders and executive teams.",
           "bullets": [
             "Own and develop an enterprise platform for monitoring AI usage, adoption, and spend across providers, models, teams, and users.",
-            "Build production services and data pipelines using Python, Vue.js, MongoDB, PostgreSQL, Snowflake, RabbitMQ, and OpenShift.",
+            "Build production services and data pipelines using Python, Vue.js, MongoDB, PostgreSQL, Snowflake, RabbitMQ, Kafka, Kubernetes, OpenShift, AWS, and GCP.",
             "Partner with engineering, business, and executive stakeholders to translate requirements into scalable technical solutions.",
-            "Support enterprise deployment and integration of Claude, OpenAI, Copilot, Gemini, Glean, and internally developed AI tools."
-          ]
-        }
-      ]
+            "Support enterprise deployment and integration of Claude, OpenAI, Copilot, Gemini, Glean, and internally developed AI tools.",
+          ],
+        },
+      ],
     },
     {
-      "company": "Saint Louis University Center for Additive Manufacturing",
-      "position": "Additive Manufacturing Technician (SLUCAM)",
+      "company": "SLU Center for Additive Manufacturing",
+      "position": "Software Application Engineer / Research Adjacent",
       "location": "St. Louis",
-      "date": "Aug 2022 - Present",
+      "date": "Aug 2022 - Jul 2026",
       "projects": [
         {
-          "description": "At the Saint Louis University Center for Additive Manufacturing, I work with engineering for additive manufacturing, focusing on documenting and providing education regarding SLUCAM' technologies, processes, and best practices. I have also built a custom project management platform for both SLUCAM and other SLU facilities, all while serving as primary liason between SLUCAM and public during tours & outreach.",
+          "description": "Lead technical strategy, architecture, and production delivery for SLUCAM software spanning image and data processing, project management, and additive-manufacturing research.",
           "bullets": [
-            "Served as primary liason between SLUCAM and public during tours & outreach",
-            "Grew startup-style operations from -$6,000 MRR to over $10,000 MRR within a collegiate setting",
-            "Architected reliable custom software for everything from custom hardware integration to project management"
+            "Lead technical strategy, architecture, and production delivery for SLUCAM's software portfolio, from image and data-processing tools to enterprise project-management systems.",
+            "Architected CoreDesk, a JavaScript/TypeScript project-management tool; advanced it from a proof of concept to production and led five developers through continued design and deployment.",
+            "Led Voxel Print research, reverse-engineering Stratasys full-color 3D printers and publishing a workflow that converts images into print-ready slices.",
+            "Designed a high-volume Go/C data-processing pipeline that converted more than 1.2 billion proprietary 3D drone-scan points into full-color, 3D-printable files.",
+            "Engineered Python-based FuseTools/FuseLapse by reverse-engineering Formlabs TCP and WebSocket protocols and building image-processing workflows for SLS-print timelapses.",
           ],
           "icons": [
             "react",
@@ -140,12 +148,29 @@
             "mysql",
             "nodejs",
             "makerbot",
-            "arduino"
-          ]
-        }
-      ]
+            "arduino",
+          ],
+        },
+      ],
     },
     {
+      "company": "Open Source with SLU",
+      "position": "Technical Lead / Senior Software Developer",
+      "location": "St. Louis",
+      "date": "Jul 2025 - Jun 2026",
+      "projects": [
+        {
+          "description": "Led the continued development and campus-scale adoption of CoreDesk, a custom project-management tool initially created at the SLU Center for Additive Manufacturing.",
+          "bullets": [
+            "Led continued development of CoreDesk, a custom project-management tool, growing it from a narrow-use tool to a configurable platform used by more than 1,000 SLU students, faculty, and staff.",
+            "Recruited, trained, and managed a five-developer team across two semesters, directing delivery, code quality, and the product roadmap.",
+            "Served as the first undergraduate invited to be a Technical Lead in the SLU Open Source program.",
+            "Built a maintainable production stack with Node.js, React, TypeScript, Prisma, PostgreSQL, RabbitMQ, Docker, Jest, Cypress, Cloudflare Workers, DigitalOcean, and AWS.",
+          ],
+        },
+      ],
+    },
+    /* {
       "company": "Saint Louis University Department of Mechanical Engineering",
       "position": "Teacher's Assistant (Mechanical Engineering)",
       "location": "St. Louis",
@@ -161,7 +186,7 @@
           "icons": ["solidworks"]
         }
       ]
-    },
+    }, */
     {
       "company": "Differential Dev Shop",
       "position": "Software Engineer",
@@ -169,12 +194,11 @@
       "date": "Oct 2022 - July 2024",
       "projects": [
         {
-          "title": "Apollos",
           "description": "I co-op'd at Differential on the Apollos team, developing a private-label social media platform. As part of the Frontend team, I played a key role in constructing our React Native template. Over the process of 31 merged PRs, I drove a feature that secured 3 clients, contributing to over $100k in revenue.",
           "bullets": [
-            "Built out a feature that earned Apollos 3 new clients, resulting in $100k+ revenue",
+            "Built a fintech solution that earned Apollos 3 new clients, resulting in $100k+ revenue",
             "Rapidly grew from IC to system architect and engineering, responsible for CI/CD, deployment, and reliability on a platform with over 1 million MAU",
-            "Managed a cluster of hosting technologies including AWS, On-prem, hybrid, and using Terraform to standardize implementation"
+            "Built across Python, JavaScript, TypeScript, React Native, and Swift; managed AWS, on-premises, and hybrid infrastructure with Terraform.",
           ],
           "icons": [
             "react",
@@ -186,10 +210,10 @@
             "apollographql",
             "heroku",
             "sequelize",
-            "postgres"
-          ]
-        }
-      ]
+            "postgres",
+          ],
+        },
+      ],
     },
     {
       "company": "Myers Industries",
@@ -198,18 +222,15 @@
       "date": "Jul 2021 - Nov 2021",
       "projects": [
         {
-          "title": "MTS Xpress",
           "description": "Developed a proof-of-concept app and the corresponding backend and database for internal use by Myers sales reps to quickly order consumable hardware. In tests, MTS Express improved efficiency by reducing lag time between a stock outage and a replacement order being placed. The idea has led to over $3 million in new revenue in 2025 and has increased the value of orders 400% and average order value by 160%",
           "bullets": [
-            "Rapid-prototyped an app to help pitch the idea to leadership",
-            "Led to $3.2 million in new revenue from Xpress orders in 2025",
-            "Increased average line item count by 400% and average order value by 160%",
-            "Led to a 60% voluntary adoption rate among sales reps",
-            "Reduced lag time between a stock outage and a replacement order being placed"
+            "Rapid-prototyped a mobile ordering app, backend, and database that enabled sales representatives to replace consumable hardware quickly after stock outages.",
+            "Generated $3.2 million in 2025 Xpress-order revenue, increasing average line-item count by 400% and average order value by 160%.",
+            "Achieved 60% voluntary adoption among sales representatives while materially reducing the lag between stock outages and replacement orders.",
           ],
-          "icons": ["react", "ios", "express", "mysql", "nodejs"]
-        }
-      ]
+          "icons": ["react", "ios", "express", "mysql", "nodejs"],
+        },
+      ],
     },
     {
       "show": false,
@@ -225,30 +246,21 @@
             "Recruited, trained, and managed 650+ volunteers over 4 years",
             "Served in the 6 member executive team, directing the event and ultimately raising a yearly average of $135,000 for Adventure Crew",
             "Directed volunteers through 246 shifts",
-            "Developed a volunteer registration & management system"
-          ]
-        }
-      ]
-    }
+            "Developed a volunteer registration & management system",
+          ],
+        },
+      ],
+    },
   ],
   "projects": [
     {
-      "title": "2d23d2",
-      "date": "2025 - Present",
+      "title": "Ohio River Paddlefest",
+      "position": "Volunteer Coordinator",
+      "date": "2017 - Present",
       "bullets": [
-        "Three.js powered web app that extrudes a 2d shape into individual 3d objects for textile 3d printing",
-        "Procedural 3d object generation at runtime allows rapid file iteration for stylized polyjet textile printing"
+        "Helped deliver a 2026 Guinness World Record for the “Largest Paddle Craft Party,” bringing more than 1,400 people onto the Ohio River.",
+        "Recruited, trained, managed, and supported more than 200 volunteers across the four-day event.",
       ],
-      "links": [
-        {
-          "text": "2d23d2.jackcrane.rocks",
-          "href": "https://2d23d2.jackcrane.rocks"
-        },
-        {
-          "text": "(demo) https://youtu.be/XgM995ynPd8",
-          "href": "https://youtu.be/XgM995ynPd8"
-        }
-      ]
     },
     {
       "title": "FIRST Robotics",
@@ -258,11 +270,10 @@
         "Founded and captained high school a team that competed in the state championship 3 of 4 years",
         "Participated in the world championship.",
         "Earned the highest individual leadership award in the state",
-        "Won awards for teamwork, sportsmanship, documentation, software, and hardware design",
-        "Mentored/coached an inner city high school team and FTA/Emceed tournaments"
+        "Mentored/coached an inner city high school team and FTA/Emceed tournaments",
       ],
-      "icons": ["first"]
-    }
+      "icons": ["first"],
+    },
   ],
   "publications": [
     {
@@ -273,9 +284,10 @@
       "links": [
         {
           "text": "https://go.jackcrane.rocks/vmlwfs",
-          "href": "https://go.jackcrane.rocks/vmlwfs"
-        }
-      ]
+          "href": "https://go.jackcrane.rocks/vmlwfs",
+          "note": "(Pages 9-11)",
+        },
+      ],
     },
     {
       "title": "Translating Images into Voxel Print-ready slices",
@@ -285,15 +297,15 @@
       "links": [
         {
           "text": "https://go.jackcrane.rocks/voxel-print",
-          "href": "https://go.jackcrane.rocks/voxel-print"
-        }
-      ]
-    }
+          "href": "https://go.jackcrane.rocks/voxel-print",
+        },
+      ],
+    },
   ],
   "awards": [
     "5 time Presidential Volunteer Service Award",
     "FIRST Dean's List Finalist",
     "Private Pilot's License",
-    "Summit Country Day Excellence in Technology Award"
-  ]
+    "Summit Country Day Excellence in Technology Award",
+  ],
 }
