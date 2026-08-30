@@ -206,6 +206,13 @@ const App = () => {
         useLongText={useLongText}
         showIcons={data.showIcons}
       />
+      {/* SUMMARY */}
+      <>
+        <Spacer />
+        <Subtitle>Professional Summary</Subtitle>
+        <Hr />
+        <BodyText style={{ marginTop: 0 }}>{data.summary}</BodyText>
+      </>
       {/* EDUCATION */}
       <>
         <Spacer />
@@ -222,51 +229,59 @@ const App = () => {
           </Row>
         ))}
       </>
-      <Row align="flex-start" gap={10}>
-        {/* SKILLS */}
-        <div style={{ flex: 1 }}>
-          <Spacer />
-          <Subtitle>Skills</Subtitle>
-          <Hr />
-          <Row style={{ alignItems: "flex-start" }}>
-            <SkillContainer>
-              {o(f(data.skills))
-                .slice(0, Math.ceil(data.skills.length / 2))
-                .map((skill, i) => (
-                  <Skills key={i}>
-                    <SkillTitle>{skill.title}</SkillTitle>{" "}
-                    <SkillDescription>
-                      {skill.fields.join(", ")}
-                    </SkillDescription>
-                  </Skills>
+      {(data.showSkills || data.showAwardsAndCertifications) && (
+        <Row align="flex-start" gap={10}>
+          {/* SKILLS */}
+          {data.showSkills && (
+            <div style={{ flex: 1 }}>
+              <Spacer />
+              <Subtitle>Skills</Subtitle>
+              <Hr />
+              <Row style={{ alignItems: "flex-start" }}>
+                <SkillContainer>
+                  {o(f(data.skills))
+                    .slice(0, Math.ceil(data.skills.length / 2))
+                    .map((skill, i) => (
+                      <Skills key={i}>
+                        <SkillTitle>{skill.title}</SkillTitle>{" "}
+                        <SkillDescription>
+                          {skill.fields.join(", ")}
+                        </SkillDescription>
+                      </Skills>
+                    ))}
+                </SkillContainer>
+                <SkillContainer>
+                  {o(f(data.skills))
+                    .slice(Math.ceil(data.skills.length / 2))
+                    .map((skill, i) => (
+                      <Skills key={i}>
+                        <SkillTitle>{skill.title}</SkillTitle>{" "}
+                        <SkillDescription>
+                          {skill.fields.join(", ")}
+                        </SkillDescription>
+                      </Skills>
+                    ))}
+                </SkillContainer>
+              </Row>
+            </div>
+          )}
+          {/* AWARDS */}
+          {data.showAwardsAndCertifications && (
+            <div style={{ maxWidth: "25%" }}>
+              <Spacer />
+              <Subtitle>Awards & Certifications</Subtitle>
+              <Hr />
+              <BodyText style={{ marginTop: 0 }}>
+                {f(data.awards).map((award, i) => (
+                  <SkillTitle key={i} style={{ display: "block" }}>
+                    {award}
+                  </SkillTitle>
                 ))}
-            </SkillContainer>
-            <SkillContainer>
-              {o(f(data.skills))
-                .slice(Math.ceil(data.skills.length / 2))
-                .map((skill, i) => (
-                  <Skills key={i}>
-                    <SkillTitle>{skill.title}</SkillTitle>{" "}
-                    <SkillDescription>
-                      {skill.fields.join(", ")}
-                    </SkillDescription>
-                  </Skills>
-                ))}
-            </SkillContainer>
-          </Row>
-        </div>
-        {/* AWARDS */}
-        <div style={{ maxWidth: "25%" }}>
-          <Spacer />
-          <Subtitle>Awards & Certifications</Subtitle>
-          <Hr />
-          <BodyText style={{ marginTop: 0 }}>
-            {f(data.awards).map((award, i) => (
-              <SkillTitle style={{ display: "block" }}>{award}</SkillTitle>
-            ))}
-          </BodyText>
-        </div>
-      </Row>
+              </BodyText>
+            </div>
+          )}
+        </Row>
+      )}
       {/* EXPERIENCE */}
       <>
         <Spacer />
@@ -294,8 +309,8 @@ const App = () => {
                         : 0,
                   }}
                 >
-                  {bulletPreference === "both" ||
-                  bulletPreference === "bullet" ? (
+                  {(bulletPreference === "both" ||
+                  bulletPreference === "bullet") && proj.title ? (
                     <Row gap={5}>
                       <BodyText style={{ margin: 0 }}>
                         <B>{proj.title} </B>
@@ -323,6 +338,7 @@ const App = () => {
                     <BodyText
                       style={{
                         width: bulletPreference === "both" ? "50%" : null,
+                        marginTop: proj.title ? undefined : 0,
                       }}
                     >
                       {bulletPreference === "bullet" ||
@@ -341,6 +357,7 @@ const App = () => {
                     <BodyText
                       style={{
                         width: bulletPreference === "both" ? "50%" : null,
+                        marginTop: proj.title ? undefined : 0,
                       }}
                     >
                       {bulletPreference === "text" ||

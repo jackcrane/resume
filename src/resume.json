@@ -1,23 +1,26 @@
 {
   "name": "Jack Crane",
+  "summary": "Software engineer with experience beyond traditional early-career scope, including end-to-end ownership of production enterprise applications and responsibilities typically assigned to senior engineers. Experienced in leading technical direction, building scalable AI and data systems, and partnering with executives and engineering teams to deliver high-impact products.",
+  "showSkills": false,
+  "showAwardsAndCertifications": false,
   "showIcons": false,
   "headerLinks": [
     {
       "icon": "icons/web.svg",
       "href": "https://jackcrane.rocks",
-      "text": "jackcrane.rocks",
+      "text": "https://jackcrane.rocks",
       "longText": "jackcrane.rocks"
     },
     {
       "icon": "icons/github.svg",
       "href": "https://github.com/jackcrane",
-      "text": "jackcrane",
+      "text": "github.com/jackcrane",
       "longText": "github.com/jackcrane"
     },
     {
       "icon": "icons/linkedin.svg",
       "href": "https://linkedin.com/in/jackcranee",
-      "text": "jackcranee",
+      "text": "linkedin.com/in/jackcranee",
       "longText": "linkedin.com/in/jackcranee"
     },
     {
@@ -102,13 +105,29 @@
   ],
   "experience": [
     {
-      "company": "Saint Louis University",
-      "position": "Additive Manufacturing Technician & Teacher's Assistant (Mech. Engineering)",
+      "company": "World Wide Technology",
+      "position": "Software Engineer & AI Analyst",
+      "location": "St. Louis",
+      "date": "May 2026 - Present",
+      "projects": [
+        {
+          "description": "Own end-to-end development of an enterprise platform that turns AI usage and cost data into actionable adoption, budgeting, trend-analysis, and cost-optimization insights for leaders and executive teams.",
+          "bullets": [
+            "Own and develop an enterprise platform for monitoring AI usage, adoption, and spend across providers, models, teams, and users.",
+            "Build production services and data pipelines using Python, Vue.js, MongoDB, PostgreSQL, Snowflake, RabbitMQ, and OpenShift.",
+            "Partner with engineering, business, and executive stakeholders to translate requirements into scalable technical solutions.",
+            "Support enterprise deployment and integration of Claude, OpenAI, Copilot, Gemini, Glean, and internally developed AI tools."
+          ]
+        }
+      ]
+    },
+    {
+      "company": "Saint Louis University Center for Additive Manufacturing",
+      "position": "Additive Manufacturing Technician (SLUCAM)",
       "location": "St. Louis",
       "date": "Aug 2022 - Present",
       "projects": [
         {
-          "title": "SLU Center for Additive Manufacturing (SLUCAM) - Research Adjacent",
           "description": "At the Saint Louis University Center for Additive Manufacturing, I work with engineering for additive manufacturing, focusing on documenting and providing education regarding SLUCAM' technologies, processes, and best practices. I have also built a custom project management platform for both SLUCAM and other SLU facilities, all while serving as primary liason between SLUCAM and public during tours & outreach.",
           "bullets": [
             "Served as primary liason between SLUCAM and public during tours & outreach",
@@ -123,9 +142,16 @@
             "makerbot",
             "arduino"
           ]
-        },
+        }
+      ]
+    },
+    {
+      "company": "Saint Louis University Department of Mechanical Engineering",
+      "position": "Teacher's Assistant (Mechanical Engineering)",
+      "location": "St. Louis",
+      "date": "Aug 2022 - Present",
+      "projects": [
         {
-          "title": "Teacher's Assistant",
           "description": "Developed the curriculum and lead a team of other TAs to teach the \"ESCI 1701\" Engineering Fundamentals Studio course, teaching students an introduction to engineering design through an introduction to Solidworks and technical drawing.",
           "bullets": [
             "Developed a Spatial Thinking, Technical Drawing, and Solidworks curriculum",
