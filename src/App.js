@@ -201,7 +201,11 @@ const App = () => {
   const [bulletPreference, setBulletPreference] = useState("bullet");
   return (
     <Page>
-      <Name headerLinks={data.headerLinks} useLongText={useLongText} />
+      <Name
+        headerLinks={data.headerLinks}
+        useLongText={useLongText}
+        showIcons={data.showIcons}
+      />
       {/* EDUCATION */}
       <>
         <Spacer />
@@ -296,9 +300,10 @@ const App = () => {
                       <BodyText style={{ margin: 0 }}>
                         <B>{proj.title} </B>
                       </BodyText>
-                      {proj?.icons?.map((icon, i) => (
-                        <>{switchForIcon(icon)}</>
-                      ))}
+                      {data.showIcons &&
+                        proj?.icons?.map((icon, i) => (
+                          <>{switchForIcon(icon)}</>
+                        ))}
                       {/* <Hr
                         style={{
                           height: 2,
@@ -371,9 +376,10 @@ const App = () => {
             <Row gap={5}>
               <RowItem>
                 <SansSubtitle>{project.title}</SansSubtitle>
-                {project?.icons?.map((icon) => {
-                  return switchForIcon(icon);
-                })}
+                {data.showIcons &&
+                  project?.icons?.map((icon) => {
+                    return switchForIcon(icon);
+                  })}
                 {project?.links?.map((link) => (
                   <BodyText style={{ margin: 0 }}>
                     [ <A href={link.href}>{link.text}</A> ]
@@ -432,9 +438,10 @@ const App = () => {
             <Row gap={5}>
               <RowItem>
                 <SansSubtitle>{pub.title}</SansSubtitle>
-                {pub?.icons?.map((icon) => {
-                  return switchForIcon(icon);
-                })}
+                {data.showIcons &&
+                  pub?.icons?.map((icon) => {
+                    return switchForIcon(icon);
+                  })}
                 {pub?.links?.map((link) => (
                   <BodyText style={{ margin: 0 }}>
                     [ <A href={link.href}>{link.text}</A> ]

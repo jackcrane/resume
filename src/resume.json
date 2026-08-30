@@ -1,5 +1,6 @@
 {
   "name": "Jack Crane",
+  "showIcons": false,
   "headerLinks": [
     {
       "icon": "icons/web.svg",
@@ -51,12 +52,7 @@
   ],
   "skills": [
     {
-      "sort": 5,
-      "title": "UI Design/graphic design",
-      "fields": ["Figma", "Photoshop", "Illustrator"]
-    },
-    {
-      "sort": 4,
+      "sort": 1,
       "title": "Programming Languages",
       "fields": [
         "JavaScript",
@@ -67,7 +63,8 @@
         "Java",
         "Matlab",
         "R",
-        "SQL"
+        "SQL",
+        "Go"
       ]
     },
     {
@@ -78,7 +75,7 @@
     {
       "sort": 7,
       "title": "Dev Ops",
-      "fields": ["Git", "Github"]
+      "fields": ["Git", "Github", "Terraform", "Temporal"]
     },
     {
       "sort": 8,
@@ -101,15 +98,6 @@
         "Materialize 3-Matic",
         "Design for Additive"
       ]
-    },
-    {
-      "sort": 1,
-      "title": "Additive Manufacturing",
-      "fields": [
-        "Bambu Lab (FDM)",
-        "Stratasys (FDM, Polyjet, DLP)",
-        "Formlabs (SLS)"
-      ]
     }
   ],
   "experience": [
@@ -123,10 +111,9 @@
           "title": "SLU Center for Additive Manufacturing (SLUCAM) - Research Adjacent",
           "description": "At the Saint Louis University Center for Additive Manufacturing, I work with engineering for additive manufacturing, focusing on documenting and providing education regarding SLUCAM' technologies, processes, and best practices. I have also built a custom project management platform for both SLUCAM and other SLU facilities, all while serving as primary liason between SLUCAM and public during tours & outreach.",
           "bullets": [
-            "Developed technical documentation and standard operating procedures for SLUCAM",
             "Served as primary liason between SLUCAM and public during tours & outreach",
-            "Developed a custom project management platform for the SLUCAM & other SLU facilities",
-            "Reviewed and interfaced with customers to optimize designs for Additive processes, then prioritized, scheduled, and processed print jobs on systems ranging from consumer to industrial FDM to DLP & SLA, Polyjet, SLS, and fusion processes."
+            "Grew startup-style operations from -$6,000 MRR to over $10,000 MRR within a collegiate setting",
+            "Architected reliable custom software for everything from custom hardware integration to project management"
           ],
           "icons": [
             "react",
@@ -151,7 +138,7 @@
     },
     {
       "company": "Differential Dev Shop",
-      "position": "Co-Op Software Developer",
+      "position": "Software Engineer",
       "location": "Cincinnati",
       "date": "Oct 2022 - July 2024",
       "projects": [
@@ -159,9 +146,9 @@
           "title": "Apollos",
           "description": "I co-op'd at Differential on the Apollos team, developing a private-label social media platform. As part of the Frontend team, I played a key role in constructing our React Native template. Over the process of 31 merged PRs, I drove a feature that secured 3 clients, contributing to over $100k in revenue.",
           "bullets": [
-            "One of 3 frontend React Native developers, but branched into fullstack",
-            "31 merged Pull Requests over summer",
-            "Built out a feature that earned Apollos 3 new clients, resulting in $100k+ revenue"
+            "Built out a feature that earned Apollos 3 new clients, resulting in $100k+ revenue",
+            "Rapidly grew from IC to system architect and engineering, responsible for CI/CD, deployment, and reliability on a platform with over 1 million MAU",
+            "Managed a cluster of hosting technologies including AWS, On-prem, hybrid, and using Terraform to standardize implementation"
           ],
           "icons": [
             "react",
@@ -281,7 +268,6 @@
     "5 time Presidential Volunteer Service Award",
     "FIRST Dean's List Finalist",
     "Private Pilot's License",
-    "Volunteer of the Year (Adventure Crew)",
     "Summit Country Day Excellence in Technology Award"
   ]
 }
