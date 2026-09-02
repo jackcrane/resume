@@ -140,7 +140,7 @@
             "Lead technical strategy, architecture, and production delivery for SLUCAM's software portfolio, from image and data-processing tools to enterprise project-management systems.",
             "Architected CoreDesk, a JavaScript/TypeScript project-management tool; advanced it from a proof of concept to production and led five developers through continued design and deployment.",
             "Led Voxel Print research, reverse-engineering Stratasys full-color 3D printers and publishing a workflow that converts images into print-ready slices.",
-            "Designed and optimized a high-volume Go/C data-processing pipeline, transforming 1.2B+ proprietary 3D scan points into production-ready full-color 3D-printable datasets.",
+            "Designed and optimized a high-volume Go/C/C++/Java data-processing pipeline, transforming 1.2B+ proprietary 3D scan points into production-ready full-color 3D-printable datasets.",
             "Engineered Python-based FuseTools/FuseLapse by reverse-engineering Formlabs TCP and WebSocket protocols and building image-processing workflows for SLS-print timelapses.",
           ],
           "icons": [
