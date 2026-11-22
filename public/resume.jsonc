@@ -221,6 +221,7 @@
       "position": "Freelance developer",
       "location": "Akron",
       "date": "Jul 2021 - Nov 2021",
+      "show": false,
       "projects": [
         {
           "description": "Developed a proof-of-concept app and the corresponding backend and database for internal use by Myers sales reps to quickly order consumable hardware. In tests, MTS Express improved efficiency by reducing lag time between a stock outage and a replacement order being placed. The idea has led to over $3 million in new revenue in 2025 and has increased the value of orders 400% and average order value by 160%",
